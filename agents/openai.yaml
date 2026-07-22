@@ -1,0 +1,4 @@
+interface:
+  display_name: "设计宗师"
+  short_description: "严守既有规范与 Design Token，并统筹业务、体验、品牌和高阶审美"
+  default_prompt: "Use $design-grandmaster to work within the approved design system, preserve shared Design Tokens, and deliver a coherent, accessible, build-ready experience."
