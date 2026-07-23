@@ -1,5 +1,9 @@
 # Design Grandmaster
 
+[![Validate](https://github.com/qlhouseClub/design-grandmaster/actions/workflows/validate.yml/badge.svg)](https://github.com/qlhouseClub/design-grandmaster/actions/workflows/validate.yml)
+[![Release](https://img.shields.io/github/v/release/qlhouseClub/design-grandmaster?display_name=tag)](https://github.com/qlhouseClub/design-grandmaster/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 面向高要求产品与视觉项目的设计宗师技能包。它同时处理业务目标、用户体验、设计规范、Design Token、品牌表达、审美判断、历史与当代视觉研究、交互、情绪体验、无障碍和工程交付。
 
 它不会把“好看”简化成流行风格，也不会为了视觉表现破坏已有设计系统。
@@ -60,6 +64,7 @@
 design-grandmaster/
 ├── SKILL.md                         # 主入口、路径选择与质量门槛
 ├── agents/openai.yaml               # Codex 界面元数据
+├── .github/workflows/               # 自动验证与版本发布
 ├── references/
 │   ├── design-system-conformance.md
 │   ├── aesthetic-discovery-research.md
@@ -78,12 +83,17 @@ design-grandmaster/
 │   └── canonical-sources.md
 ├── platforms/                       # 跨平台元数据与扣子桥接提示词
 ├── scripts/build_compat.py          # 生成 TRAE、OpenAI Plugin、扣子和便携包
-└── COMPATIBILITY.md                 # 跨平台安装、限制与维护规则
+├── COMPATIBILITY.md                 # 跨平台安装、限制与维护规则
+├── CONTRIBUTING.md                  # 贡献规则
+├── SECURITY.md                      # 私密安全报告
+└── LICENSE                          # MIT 许可证
 ```
 
 ## 跨平台安装
 
 仓库同时适配 Codex、ChatGPT、TRAE Work、Hermes、OpenClaw 和扣子。请选择实际使用的平台；不需要把所有版本都安装一遍。
+
+不想在本地构建时，可以直接从 [GitHub Releases](https://github.com/qlhouseClub/design-grandmaster/releases) 下载 TRAE、OpenAI Plugin、扣子或便携 ZIP。
 
 | 平台 | 推荐安装方式 | 安装后形态 |
 |---|---|---|
@@ -104,13 +114,15 @@ New-Item -ItemType Directory -Force (Split-Path $skillDir) | Out-Null
 git clone https://github.com/qlhouseClub/design-grandmaster.git $skillDir
 ```
 
-若希望与其他兼容 Agent 共用技能，也可以把目标目录改为：
+macOS / Linux：
 
-```text
-%USERPROFILE%\.agents\skills\design-grandmaster
+```bash
+skill_dir="$HOME/.codex/skills/design-grandmaster"
+mkdir -p "$(dirname "$skill_dir")"
+git clone https://github.com/qlhouseClub/design-grandmaster.git "$skill_dir"
 ```
 
-重启或刷新 Codex / ChatGPT 后，即可通过“使用设计宗师……”等自然语言触发。
+若希望与其他兼容 Agent 共用技能，也可以把目标根目录改为 `~/.agents/skills/`。重启或刷新客户端后，即可通过“使用设计宗师……”等自然语言触发。
 
 ### ChatGPT Work / 团队 Plugin
 
@@ -123,11 +135,13 @@ python .\scripts\build_compat.py --platform openai
 codex.cmd plugin marketplace add .\dist\openai-marketplace
 ```
 
-重启 ChatGPT 桌面端，在 Plugins 中安装“设计宗师”。需要团队使用时，可从插件详情页分享到 ChatGPT 工作区。独立插件包位于：
+macOS / Linux 最后一条命令使用：
 
-```text
-dist/openai/design-grandmaster-plugin.zip
+```bash
+codex plugin marketplace add ./dist/openai-marketplace
 ```
+
+重启 ChatGPT 桌面端，在 Plugins 中安装“设计宗师”。需要团队使用时，可从插件详情页分享到 ChatGPT 工作区。独立插件包为 `dist/openai/design-grandmaster-plugin.zip`。
 
 ### TRAE Work / SOLO / IDE
 
@@ -145,16 +159,10 @@ git clone https://github.com/qlhouseClub/design-grandmaster.git $skillDir
 <项目>/.trae/skills/design-grandmaster/
 ```
 
-也可以生成上传包：
+也可以下载 Release 中的 `design-grandmaster.zip`，在 TRAE 的“设置 → 技能与命令/规则和技能 → 创建或上传技能”中导入。自行构建命令为：
 
 ```powershell
 python .\scripts\build_compat.py --platform trae
-```
-
-然后在 TRAE 的“设置 → 技能与命令/规则和技能 → 创建或上传技能”中选择：
-
-```text
-dist/trae/design-grandmaster.zip
 ```
 
 ### Hermes Agent
@@ -165,6 +173,14 @@ dist/trae/design-grandmaster.zip
 $skillDir = "$env:USERPROFILE\.hermes\skills\design-grandmaster"
 New-Item -ItemType Directory -Force (Split-Path $skillDir) | Out-Null
 git clone https://github.com/qlhouseClub/design-grandmaster.git $skillDir
+```
+
+macOS / Linux：
+
+```bash
+skill_dir="$HOME/.hermes/skills/design-grandmaster"
+mkdir -p "$(dirname "$skill_dir")"
+git clone https://github.com/qlhouseClub/design-grandmaster.git "$skill_dir"
 ```
 
 安装后新建会话；若希望当前会话立即刷新，可在 Hermes 中执行 `/reset`。
@@ -183,15 +199,15 @@ openclaw skills install git:qlhouseClub/design-grandmaster@main
 openclaw skills install git:qlhouseClub/design-grandmaster@main --global
 ```
 
-从本地仓库安装：
+从已克隆的仓库根目录安装：
 
-```powershell
-openclaw skills install 'E:\design-grandmaster' --as design-grandmaster
+```text
+openclaw skills install . --as design-grandmaster
 ```
 
 ### 扣子 / Coze
 
-扣子不直接读取 Agent Skill 目录，需要先生成转换包：
+扣子不直接读取 Agent Skill 目录。可以下载 Release 中的 `design-grandmaster-coze.zip`，或自行生成：
 
 ```powershell
 git clone https://github.com/qlhouseClub/design-grandmaster.git
@@ -260,3 +276,10 @@ python .\scripts\build_compat.py --platform all
 - 已验证历史文化视觉研究与当代数字转译流程
 - 已加入真实资产清单、风险分级方向 Gate、视觉工艺语法与运行验证链路
 - 已生成并校验 TRAE、OpenAI Plugin、扣子和便携适配产物
+
+## 许可、贡献与安全
+
+- 使用条款：[MIT License](LICENSE)
+- 第三方研究与许可边界：[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+- 贡献方式：[CONTRIBUTING.md](CONTRIBUTING.md)
+- 私密报告安全问题：[SECURITY.md](SECURITY.md)
