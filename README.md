@@ -81,21 +81,140 @@ design-grandmaster/
 └── COMPATIBILITY.md                 # 跨平台安装、限制与维护规则
 ```
 
-## 安装
+## 跨平台安装
 
-将仓库克隆或复制到 Codex / ChatGPT 桌面端个人技能目录：
+仓库同时适配 Codex、ChatGPT、TRAE Work、Hermes、OpenClaw 和扣子。请选择实际使用的平台；不需要把所有版本都安装一遍。
+
+| 平台 | 推荐安装方式 | 安装后形态 |
+|---|---|---|
+| Codex / ChatGPT 桌面端 | 克隆到个人技能目录 | 原生 Agent Skill |
+| ChatGPT Work / 团队 | 生成并安装 Plugin | OpenAI Plugin |
+| TRAE Work / SOLO / IDE | 克隆到技能目录，或上传生成的 ZIP | 原生 Skill |
+| Hermes Agent | 克隆到 Hermes 技能目录 | 原生 Skill |
+| OpenClaw | 使用 Git 安装命令 | 原生 Agent Skill |
+| 扣子 / Coze | 生成提示词与知识库包 | 提示词 + RAG 知识库 |
+
+### Codex / ChatGPT 桌面端
+
+Windows PowerShell：
 
 ```powershell
-git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFILE\.agents\skills\design-grandmaster"
+$skillDir = "$env:USERPROFILE\.codex\skills\design-grandmaster"
+New-Item -ItemType Directory -Force (Split-Path $skillDir) | Out-Null
+git clone https://github.com/qlhouseClub/design-grandmaster.git $skillDir
 ```
 
-重启或刷新 Codex 后，即可通过自然语言触发技能。
+若希望与其他兼容 Agent 共用技能，也可以把目标目录改为：
 
-## 跨平台兼容
+```text
+%USERPROFILE%\.agents\skills\design-grandmaster
+```
 
-仓库同时适配 Codex、ChatGPT、TRAE Work、Hermes、OpenClaw 和扣子。Codex、TRAE、Hermes 与 OpenClaw 复用开放的 `SKILL.md` 结构；ChatGPT Work 使用生成的 Plugin；扣子使用系统提示词与知识库转换层。
+重启或刷新 Codex / ChatGPT 后，即可通过“使用设计宗师……”等自然语言触发。
 
-完整安装方法、平台边界和生成命令见 [COMPATIBILITY.md](COMPATIBILITY.md)。
+### ChatGPT Work / 团队 Plugin
+
+先克隆仓库并生成 OpenAI Plugin：
+
+```powershell
+git clone https://github.com/qlhouseClub/design-grandmaster.git
+Set-Location .\design-grandmaster
+python .\scripts\build_compat.py --platform openai
+codex.cmd plugin marketplace add .\dist\openai-marketplace
+```
+
+重启 ChatGPT 桌面端，在 Plugins 中安装“设计宗师”。需要团队使用时，可从插件详情页分享到 ChatGPT 工作区。独立插件包位于：
+
+```text
+dist/openai/design-grandmaster-plugin.zip
+```
+
+### TRAE Work / SOLO / IDE
+
+国内版全局安装：
+
+```powershell
+$skillDir = "$env:USERPROFILE\.trae-cn\skills\design-grandmaster"
+New-Item -ItemType Directory -Force (Split-Path $skillDir) | Out-Null
+git clone https://github.com/qlhouseClub/design-grandmaster.git $skillDir
+```
+
+国际版把 `.trae-cn` 改为 `.trae`。项目级安装则克隆或复制到：
+
+```text
+<项目>/.trae/skills/design-grandmaster/
+```
+
+也可以生成上传包：
+
+```powershell
+python .\scripts\build_compat.py --platform trae
+```
+
+然后在 TRAE 的“设置 → 技能与命令/规则和技能 → 创建或上传技能”中选择：
+
+```text
+dist/trae/design-grandmaster.zip
+```
+
+### Hermes Agent
+
+将完整仓库安装到 Hermes 个人技能目录，确保 `references/` 等引用文件一并保留：
+
+```powershell
+$skillDir = "$env:USERPROFILE\.hermes\skills\design-grandmaster"
+New-Item -ItemType Directory -Force (Split-Path $skillDir) | Out-Null
+git clone https://github.com/qlhouseClub/design-grandmaster.git $skillDir
+```
+
+安装后新建会话；若希望当前会话立即刷新，可在 Hermes 中执行 `/reset`。
+
+### OpenClaw
+
+安装到当前工作区：
+
+```text
+openclaw skills install git:qlhouseClub/design-grandmaster@main
+```
+
+安装为所有本地 Agent 共用的全局技能：
+
+```text
+openclaw skills install git:qlhouseClub/design-grandmaster@main --global
+```
+
+从本地仓库安装：
+
+```powershell
+openclaw skills install 'E:\design-grandmaster' --as design-grandmaster
+```
+
+### 扣子 / Coze
+
+扣子不直接读取 Agent Skill 目录，需要先生成转换包：
+
+```powershell
+git clone https://github.com/qlhouseClub/design-grandmaster.git
+Set-Location .\design-grandmaster
+python .\scripts\build_compat.py --platform coze
+```
+
+然后在扣子中完成以下设置：
+
+1. 将 `dist/coze/design-grandmaster/agent-prompt.md` 粘贴到智能体系统提示词。
+2. 新建知识库，上传 `dist/coze/design-grandmaster/knowledge/` 中的全部 Markdown 文件。
+3. 将知识库绑定到智能体并启用检索。
+4. 按需要配置联网、Figma、代码库等插件或工作流。
+
+### 生成全部平台包
+
+已经克隆仓库时，可以一次生成所有适配产物：
+
+```powershell
+python .\scripts\build_compat.py --platform all
+```
+
+完整的平台边界、目录说明、维护规则和官方依据见 [COMPATIBILITY.md](COMPATIBILITY.md)。
 
 ## 使用示例
 
