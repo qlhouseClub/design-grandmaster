@@ -27,11 +27,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          cp dist/portable/design-grandmaster.zip dist/design-grandmaster-portable.zip
           assets=(
             dist/trae/design-grandmaster.zip
             dist/openai/design-grandmaster-plugin.zip
             dist/coze/design-grandmaster-coze.zip
-            dist/portable/design-grandmaster.zip
+            dist/design-grandmaster-portable.zip
           )
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
             gh release upload "$GITHUB_REF_NAME" "${assets[@]}" --clobber
