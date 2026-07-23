@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-07-23",
+  "skill": {
+    "name": "design-grandmaster",
+    "display_name": "设计宗师",
+    "version": "1.0.0",
+    "repository": "https://github.com/qlhouseClub/design-grandmaster",
+    "publisher": {
+      "name": "qlhouseClub",
+      "url": "https://github.com/qlhouseClub"
+    },
+    "short_description": "严守设计规范与 Design Token，统筹业务、体验、品牌和高阶审美",
+    "long_description": "在业务与体验约束下完成审美发现、视觉研究、设计系统治理和高完成度设计，并持续遵守已批准的规范与 Design Token。",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "keywords": [
+      "design",
+      "design-system",
+      "design-tokens",
+      "ux",
+      "brand",
+      "visual-research",
+      "taste"
+    ],
+    "default_prompts": [
+      "用设计宗师在不改变现有 Design Token 的前提下完成这个功能设计。",
+      "用设计宗师先研究客户审美与视觉语境，再提出可落地的设计方向。"
+    ]
+  }
+}

@@ -55,31 +55,40 @@
 design-grandmaster/
 ├── SKILL.md                         # 主入口、路径选择与质量门槛
 ├── agents/openai.yaml               # Codex 界面元数据
-└── references/
-    ├── design-system-conformance.md
-    ├── aesthetic-discovery-research.md
-    ├── aesthetic-governor.md
-    ├── visual-trend-atlas.md
-    ├── experience-strategy.md
-    ├── brand-and-visual-language.md
-    ├── atomic-design-system.md
-    ├── interaction-cognition-emotion.md
-    ├── accessibility-content-inclusion.md
-    ├── responsive-motion-data.md
-    ├── critique-prototype-handoff.md
-    ├── artifact-templates.md
-    └── canonical-sources.md
+├── references/
+│   ├── design-system-conformance.md
+│   ├── aesthetic-discovery-research.md
+│   ├── aesthetic-governor.md
+│   ├── visual-trend-atlas.md
+│   ├── experience-strategy.md
+│   ├── brand-and-visual-language.md
+│   ├── atomic-design-system.md
+│   ├── interaction-cognition-emotion.md
+│   ├── accessibility-content-inclusion.md
+│   ├── responsive-motion-data.md
+│   ├── critique-prototype-handoff.md
+│   ├── artifact-templates.md
+│   └── canonical-sources.md
+├── platforms/                       # 跨平台元数据与扣子桥接提示词
+├── scripts/build_compat.py          # 生成 TRAE、OpenAI Plugin、扣子和便携包
+└── COMPATIBILITY.md                 # 跨平台安装、限制与维护规则
 ```
 
 ## 安装
 
-将仓库克隆或复制到 Codex 技能目录：
+将仓库克隆或复制到 Codex / ChatGPT 桌面端个人技能目录：
 
 ```powershell
-git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFILE\.codex\skills\design-grandmaster"
+git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFILE\.agents\skills\design-grandmaster"
 ```
 
 重启或刷新 Codex 后，即可通过自然语言触发技能。
+
+## 跨平台兼容
+
+仓库同时适配 Codex、ChatGPT、TRAE Work、Hermes、OpenClaw 和扣子。Codex、TRAE、Hermes 与 OpenClaw 复用开放的 `SKILL.md` 结构；ChatGPT Work 使用生成的 Plugin；扣子使用系统提示词与知识库转换层。
+
+完整安装方法、平台边界和生成命令见 [COMPATIBILITY.md](COMPATIBILITY.md)。
 
 ## 使用示例
 
@@ -111,3 +120,4 @@ git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFIL
 - 本地引用链接校验通过
 - 已验证既有 Token 约束在跨页面输出中的持续遵循
 - 已验证历史文化视觉研究与当代数字转译流程
+- 已生成并校验 TRAE、OpenAI Plugin、扣子和便携适配产物
