@@ -37,6 +37,31 @@ Use official platform semantics before borrowing appearance. Liquid Glass is an 
 
 Treat commercial trend reports as broad cultural signals, not design requirements. Triangulate them with current production work, image evidence, platform guidance, audience research, and the brand's own history.
 
+## Living visual and interaction practice
+
+Use different sources for different kinds of evidence:
+
+- Dreameryanyan public design curation on X: https://x.com/yanliudreamer
+- Mobbin real product screens and flows: https://mobbin.com/
+- Lapa Ninja landing-page screenshots, recordings, categories, colors, and historical versions: https://www.lapa.ninja/
+- Codrops Creative Hub and motion/development examples: https://tympanus.net/codrops/hub/
+- GC Minimal Zine Poster open-source editorial experiment: https://github.com/LiamGvchi/gc-minimal-zine-poster
+- Huashu Design open-source visual production workflow: https://github.com/alchaincyf/huashu-design
+
+Social curation is a discovery surface, not final authority. Follow quoted work to the original creator, project, code, studio, or product; inspect the visual artifact; and record what was directly observed versus inferred. Use real product libraries to study feasibility and interaction patterns, expressive galleries to expand the possibility space, and implementation sources to verify how motion or interaction actually behaves.
+
+### Dreameryanyan research snapshot
+
+Checked 2026-07-23. These posts were used as discovery leads for the current color, composition, motion, and interaction grammar; re-check the account and original sources before treating the snapshot as current:
+
+- Product and web reference-library curation: https://x.com/yanliudreamer/status/2071388911100940437
+- Vivid bounded-palette color observation: https://x.com/yanliudreamer/status/2080023160607654264
+- Infinite rolling paper-strip interaction lead: https://x.com/yanliudreamer/status/2080022913911234985
+- Minimal zine, restraint, reduction, and retro editorial lead: https://x.com/yanliudreamer/status/2079862617406046301
+- Quiet scale, atmosphere, and spatial-emotion lead: https://x.com/yanliudreamer/status/2080024365580828983
+
+The transferable findings are documented in [visual-craft-grammar.md](visual-craft-grammar.md). They are observations and project hypotheses, not permanent rules or endorsements of copying the referenced work.
+
 ## Historical and cultural visual research
 
 Use a source hierarchy rather than a generic image search:

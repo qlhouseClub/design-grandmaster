@@ -79,7 +79,7 @@ For every dial state the reason, the risk at one step higher, and the minimum vi
 
 ## 4. Competing directions
 
-Generate three materially different art directions. Include one less-obvious direction when the brand can sustain it.
+For high-aesthetic work, default to three materially different art directions and include one less-obvious direction when the brand can sustain it. Collapse to two only when a strong approved baseline narrows the question to one meaningful trade-off; use one only for low-risk conformance where there is no unresolved visual direction. Do not turn the direction count into ceremony.
 
 Each direction must contain:
 
@@ -96,6 +96,18 @@ Each direction must contain:
 11. Why it could fail
 
 Do not create three colorways of one layout. If the silhouettes are nearly identical, divergence failed.
+
+## 4A. Representative proofs and approval gate
+
+When the choice depends on visual judgment, prove each direction with comparable artifacts before the jury:
+
+- Use the same content, asset set, viewport/frame, and functional requirement.
+- Show a signature moment plus an ordinary utility state where the system must survive without spectacle.
+- For a deck, use at least two structurally different representative slides; for motion, use key moments and transition logic; for a full application, use the critical path and one recovery or dense state.
+- Compare silhouette, value structure, type voice, palette topology, material, image treatment, motion character, and restraint—not only preference.
+- Record the selected direction, owner, rejected alternatives, permitted mixing, and revisit trigger when the decision is expensive or multi-stakeholder.
+
+If rendering is unavailable, label the direction as specified but visually unproven. Prose cannot establish `Authored` or `Inevitable` finish.
 
 ## 5. The aesthetic jury
 
@@ -175,6 +187,8 @@ Remove decorative moves one by one. Keep only those whose removal reduces meanin
 - **Peer lineup test:** does it separate from five category peers for a meaningful reason?
 - **Trend half-life test:** will the work retain value after the fashionable signature saturates?
 - **Craft zoom:** do close details reveal intention rather than inconsistency?
+- **Thumbnail/color-anchor test:** at reduced size, does the focal hierarchy and intended chromatic anchor survive without every hue becoming equally loud?
+- **Negative-space test:** does open space create scale, rhythm, calm, suspense, or interaction room, or is it merely unused area?
 
 ## 8. Anti-convergence rules
 
@@ -198,12 +212,13 @@ For high-aesthetic work, include an **Aesthetic Decision Record**:
 2. Reference matrix and counter-references
 3. Temporal lineage and current signal date
 4. Aesthetic dials and operating ranges
-5. Three competing directions
-6. Jury comparison and decisive trade-off
-7. Chosen thesis and anti-thesis
-8. Visual grammar, signature moves, and deliberate restraint
-9. Craft passes and stress-test evidence
-10. Trend expiry/revisit trigger
-11. Remaining human art-direction decisions
+5. Competing directions and the approved adaptive count
+6. Comparable representative proofs and direction approval record
+7. Jury comparison and decisive trade-off
+8. Chosen thesis and anti-thesis
+9. Visual grammar, signature moves, and deliberate restraint
+10. Craft passes and stress-test evidence
+11. Trend expiry/revisit trigger
+12. Remaining human art-direction decisions
 
 If no visual inspection or rendering tool is available, provide an art-direction specification and state that the visual finish has not been proven. Do not claim `Authored` or `Inevitable` from prose alone.

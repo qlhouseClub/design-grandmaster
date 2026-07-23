@@ -48,6 +48,48 @@ Typography / color / grid / spacing / shape / surface / image / icon / motion / 
 ## Why this direction / why not alternatives
 ```
 
+## Brand evidence manifest
+
+```markdown
+# Brand Evidence: [brand / product]
+
+Governing specification / version / authority / evidence date
+
+| Asset or rule | Source / owner | Version/date | File / format / dimensions | Rights | Status | Use / prohibition |
+|---|---|---|---|---|---|---|
+
+Status: approved / official-current / shipped-observation / licensed-secondary / generated-adaptation / placeholder / conflicting / missing
+
+## Recognition-critical assets
+Logo/wordmark / product imagery / current UI / packaging / campaign / voice
+
+## Conflict and gap register
+## Provenance and accessibility variants
+## Approval or substitution decision
+```
+
+## Direction decision gate
+
+```markdown
+# Direction Decision: [initiative]
+
+Decision / owner / date / reversibility / affected surfaces
+
+## Evidence and comparable proofs
+Same content / assets / frame / runtime / signature moment / ordinary state
+
+## Options
+Thesis / anti-thesis / mechanism / risk / proof link
+
+## Decision
+Chosen direction / rejected alternatives / decisive trade-off
+
+## Boundaries
+Locked specification and tokens / permitted mix-and-match / approved exceptions
+
+## Confidence, unresolved questions, and revisit trigger
+```
+
 ## Design conformance contract
 
 ```markdown
@@ -246,6 +288,40 @@ Intent / stage / evidence available / review scope
 ## Top next actions
 ## Open questions
 ## Verdict: Approved / Approved with conditions / Needs revision
+```
+
+## Artifact verification record
+
+```markdown
+# Artifact Verification: [artifact]
+
+Entry point / build or export version / target runtime / date
+
+## Evidence
+Screenshots or renders / tested viewports and modes / tested paths and states
+
+## Results
+Open/render / console-network / interaction / responsive / accessibility / performance / token conformance
+
+## Keep / Fix / Quick wins
+## Untested conditions and limitations
+## Verdict: Ready / Ready with conditions / Not ready
+```
+
+## Motion director notes
+
+```markdown
+# Motion Director Notes: [piece]
+
+Purpose / audience / duration / runtime / export / audio context
+
+## Narrative beats and emotional curve
+## Persistent anchors and spatial model
+## Transition, timing, easing, interruption, and rest points
+## Interaction mapping and user control
+## Asset dependencies and production risks
+## Reduced-motion and static form
+## Render/test matrix and acceptance evidence
 ```
 
 ## Experience blueprint

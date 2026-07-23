@@ -21,9 +21,37 @@ Extract:
 
 Do not guess a famous brand's values from memory. Do not infer a usable visual system from a mission statement alone.
 
+## Brand evidence and asset manifest
+
+When a named brand or product is material to the output, create a compact evidence manifest before high-fidelity production. An approved specification remains the governing authority; real-world assets are evidence inside that authority, not permission to override it.
+
+Collect only what the deliverable needs:
+
+- Official logo/wordmark variants for light, dark, compact, and required-language contexts
+- Current product photography, renders, packaging, or interface captures
+- Approved palette, typography, iconography, illustration, motion, sound, and verbal assets
+- Asset source, retrieval/approval date, version, file path, format, dimensions, rights, and owner
+- Permitted use, forbidden transformations, accessibility variants, and known gaps
+- Whether each item is user-supplied, official primary evidence, shipped observation, licensed secondary evidence, generated adaptation, or placeholder
+
+Verify files rather than trusting filenames: open them, confirm format and dimensions, inspect transparency/crop, check dark/light variants, and ensure that current-product images are not stale concepts or third-party mockups.
+
+Use this authority order unless the user defines another:
+
+1. User-approved specification and explicit decision record
+2. User-supplied approved asset package
+3. Official current brand/product source
+4. Verified shipped behavior or artifact
+5. Rights-cleared secondary source
+6. Clearly labeled inference or placeholder
+
+If official assets disagree with the frozen specification, record the conflict and obtain a decision when consequential. Do not silently choose whichever looks better.
+
+If a recognition-critical asset is missing, state it. Ask for the asset or use a clearly labeled placeholder; never redraw a logo, fabricate a product screenshot, or present generated material as official.
+
 ## Direction exploration
 
-Define two or three distinct concepts with axes, not mood-board adjectives:
+Define the fewest distinct concepts needed to resolve the visual decision, normally two or three, using axes rather than mood-board adjectives. A small, strongly governed conformance task may need only one compliant baseline; a flagship identity decision normally needs three.
 
 | Dimension | Direction A | Direction B |
 |---|---|---|
@@ -42,6 +70,8 @@ For each concept specify:
 - Signature move and deliberate restraint
 - Accessibility and implementation risks
 - Why it could fail
+
+When approval is substantially visual, apply the same real content and assets to representative rendered proofs. A direction label, palette swatch, or prose description is not a substitute for seeing the composition operate on a signature moment and an ordinary state.
 
 Choose one direction and carry it through every design layer. Mixing favorite parts from incompatible concepts usually produces generic work.
 
@@ -74,6 +104,18 @@ Define color by role:
 
 For each role provide value by theme/mode, contrast requirement, permitted contexts, and forbidden uses. Never rely on color alone for state. Preserve one accent logic unless the system explicitly needs categorical colors.
 
+Also define the palette as a relationship, not a bag of swatches:
+
+- Dominant field or neutral field
+- Structural ink/text color
+- Recurring supporting hues
+- One controlled surprise or high-chroma anchor
+- Warm/cool and light/dark counterpoint
+- Separation method when adjacent hues have similar value: outline, spacing, texture, shape boundary, or luminance shift
+- Saturation budget by surface, state, and content density
+
+A vivid palette can remain coherent when the same few hues recur in stable proportions and edges remain legible. A restrained palette can still fail when low-contrast elements erase hierarchy. Validate grayscale structure, color-vision variation, text contrast, state meaning, and real display conditions.
+
 ## Layout and spacing
 
 - Choose a base rhythm and a bounded scale, not arbitrary values.
@@ -81,6 +123,9 @@ For each role provide value by theme/mode, contrast requirement, permitted conte
 - Use proximity to express relationships and whitespace to separate concepts.
 - Break the grid only to emphasize an intentional focal point.
 - Preserve vertical rhythm across typography, components, and sections.
+- Treat negative space as active structure. State whether it creates hierarchy, scale, suspense, quiet, separation, or room for interaction; empty area without a role is unfinished composition.
+- Use one focal geometry and a readable sequence of secondary anchors. Extreme scale contrast is appropriate for editorial or immersive work, but must not make routine product tasks inefficient.
+- Test the composition at thumbnail distance, reading distance, and close inspection. A strong layout should retain its focal path while revealing more craft at closer ranges.
 
 ## Shape, surface, and material
 

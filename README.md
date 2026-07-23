@@ -11,6 +11,8 @@
 - 客户审美发现、参考与反参考分析
 - 高级审美判断、视觉命题与设计裁决
 - 历史、文化、材料和视觉潮流的研究与数字化转译
+- 真实品牌资产、方向可视证明、决策留痕与运行验证
+- 配色拓扑、留白与焦点几何、动效连续性和表达性交互
 - 原子化设计、品牌、字体、色彩、排版、图像与动效
 - 信息架构、用户流程、状态、交互和认知负荷
 - 情绪体验、心理机制与用户自主性
@@ -27,6 +29,8 @@
 6. 原子化设计是组合模型，不是机械的文件夹分类法。
 7. 趋势是一种视觉谱系，不是可以直接套用的皮肤。
 8. 情绪设计必须服务于理解、信任和用户自主性。
+9. 重要视觉决策必须用代表性成品证明，不能只让客户从文字风格标签中选择。
+10. 灵感来源必须转成可解释、可测试的机制，而不是复制某位设计师或某张作品。
 
 ## 规范遵循
 
@@ -48,6 +52,7 @@
 - **品牌、文化、编辑、展览或旗舰视觉项目：** 深入进行客户审美发现、视觉语料研究和设计方向竞争。
 - **既有设计系统项目：** 首先锁定规范版本、权威来源和 Token，不允许无授权漂移。
 - **趋势项目：** 研究趋势的来源、机制、当前状态和过期风险，再决定是否以及如何使用。
+- **可运行视觉产物：** 先做最小但真实的方向证明，再逐步扩展，并在目标运行环境中检查渲染、交互、响应式和异常状态。
 
 ## 目录结构
 
@@ -60,12 +65,14 @@ design-grandmaster/
 │   ├── aesthetic-discovery-research.md
 │   ├── aesthetic-governor.md
 │   ├── visual-trend-atlas.md
+│   ├── visual-craft-grammar.md
 │   ├── experience-strategy.md
 │   ├── brand-and-visual-language.md
 │   ├── atomic-design-system.md
 │   ├── interaction-cognition-emotion.md
 │   ├── accessibility-content-inclusion.md
 │   ├── responsive-motion-data.md
+│   ├── artifact-production-validation.md
 │   ├── critique-prototype-handoff.md
 │   ├── artifact-templates.md
 │   └── canonical-sources.md
@@ -98,12 +105,21 @@ git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFIL
 - “判断液态玻璃是否适合这个金融应用，不要为了潮流牺牲可用性。”
 - “审查这套界面里的间距、字体、组件和交互是否违反设计规范。”
 - “把这个视觉方案提升到具有明确作者性和品牌辨识度的水平。”
+- “从这些灵感中提取配色、版式、动效和交互机制，再做一套不照搬原作的项目语法。”
 
 ## Token 与研究策略
 
 技能采用渐进式加载。普通产品设计不会自动加载完整的审美研究、趋势图谱和高级视觉裁决模块；只有视觉 ambition、文化风险或任务决策需要时才进入深度模式。
 
 视觉调研以“新证据不再改变视觉语法、风险或方向空间”为停止条件，避免把无上限收集参考误认为专业。
+
+产品交互研究优先查看真实上线流程，实验性网站与视觉作品用于拓展表达边界；两类证据不会混为一谈。高视觉方向先用代表性页面、幻灯片或关键帧证明，再进入批量生产。
+
+## 本轮吸收与来源
+
+本版本对 [Huashu Design](https://github.com/alchaincyf/huashu-design) 的真实资产、视觉方向证明、阶段决策与运行验证方法进行了重新设计，并保留其 [MIT 许可](https://github.com/alchaincyf/huashu-design/blob/master/LICENSE)来源说明。未吸收随机风格轮盘、模仿特定设计师、所有任务强制三稿、资产覆盖已批准规范等做法。
+
+视觉工艺模块还基于 [Dreameryanyan 在 X 的公开策展内容](https://x.com/yanliudreamer)建立了二次研究路径，并核验了其引用的真实产品流程库 [Mobbin](https://mobbin.com/)、网页案例库 [Lapa Ninja](https://www.lapa.ninja/)、创意开发案例 [Codrops](https://tympanus.net/codrops/hub/author/the_bugged_dev/) 与开源编辑设计实验 [GC Minimal Zine Poster](https://github.com/LiamGvchi/gc-minimal-zine-poster)。技能吸收的是可迁移机制，不复制具体作品或个人风格。
 
 ## 重要默认值
 
@@ -113,6 +129,9 @@ git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFIL
 - 无障碍不是最终检查项
 - 潮流不等于方向，效果不等于品味
 - 高视觉要求必须形成可识别的设计命题，而不只是干净和精致
+- 真实品牌资产必须核验来源、版本与权利，但不能凌驾于已批准的规范
+- 重要方向用同内容、同资产、同场景的可视证明进行比较
+- 可运行产物必须在实际运行环境中打开、检查和验证，不能只读源文件
 
 ## 状态
 
@@ -120,4 +139,5 @@ git clone https://github.com/qlhouseClub/design-grandmaster.git "$env:USERPROFIL
 - 本地引用链接校验通过
 - 已验证既有 Token 约束在跨页面输出中的持续遵循
 - 已验证历史文化视觉研究与当代数字转译流程
+- 已加入真实资产清单、风险分级方向 Gate、视觉工艺语法与运行验证链路
 - 已生成并校验 TRAE、OpenAI Plugin、扣子和便携适配产物

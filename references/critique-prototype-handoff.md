@@ -28,6 +28,14 @@ For each finding provide:
 
 Separate facts, interpretations, and preferences. Include genuine strengths only when specific.
 
+Summarize action using three bands in addition to severity:
+
+- **Keep:** effective mechanisms that should survive revision
+- **Fix:** contradictions or defects that block the intended outcome
+- **Quick wins:** bounded improvements with high impact relative to effort
+
+Do not let quick wins displace systemic fixes, and do not use “Keep” as generic praise.
+
 ## Redesign protocol
 
 Before changing:
@@ -90,6 +98,19 @@ Check:
 - Requirement coverage and explicit approval status
 
 Verdict must be `Ready`, `Ready with conditions`, or `Not ready` with blockers and owners.
+
+## Rendered artifact review
+
+For HTML, interactive prototypes, decks, motion, or exported visual artifacts, review the executed result as well as the source:
+
+- Open the actual entry point or export in the target runtime.
+- Capture representative screens/frames after fonts, assets, data, and intentional entrance motion settle.
+- Inspect blocking console/network errors and missing assets.
+- Exercise the critical path, reset/recovery, and material controls.
+- Check representative viewports, modes, content extremes, keyboard/focus, and reduced motion.
+- Record what was manually inspected, automated, untested, or unavailable.
+
+Use [artifact-production-validation.md](artifact-production-validation.md) for the evidence bundle and medium-specific proof.
 
 ## Implementation QA
 

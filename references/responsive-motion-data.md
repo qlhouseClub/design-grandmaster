@@ -59,6 +59,21 @@ Rules:
 - Do not animate every element independently.
 - Never require motion to understand state.
 
+### Motion narrative and continuity
+
+For expressive sites, portfolios, launches, exhibitions, or long-form motion, define the temporal composition rather than stacking isolated entrance effects:
+
+- Identify one or more persistent visual anchors that survive across beats.
+- Map scroll, drag, pointer, time, or state change to a clear spatial consequence.
+- Prefer motivated transformation, continuation, reveal, and reconfiguration over unrelated sections fading in and out.
+- Design rest points so users can read, orient, pause, reverse, or leave.
+- Make looping structures spatially and temporally seamless; do not duplicate content in a way that confuses keyboard order, screen readers, analytics, or focus.
+- Keep navigation and critical actions stable even when the surrounding presentation is experimental.
+- Match perceived mass and material to acceleration, overshoot, blur, deformation, and sound when used.
+- Provide a reduced-motion/static form that preserves hierarchy, position, and access to every action.
+
+Expressive continuity is valuable only when it strengthens narrative or orientation. Avoid hijacking scroll, hiding progress, inducing motion sickness, or forcing users to wait for choreography.
+
 ## Data and dense interfaces
 
 Start with the decision:

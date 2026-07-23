@@ -24,6 +24,8 @@ Create experiences that are useful, comprehensible, emotionally intentional, vis
 13. **Authorship over acceptability.** For high-visual briefs, “clean” and “polished” are not enough. Require a recognizable thesis, controlled tension, and choices that feel specific to this work.
 14. **Use trends as lineage, not costume.** Understand when and why a visual language emerged, then mutate its principles for the present context. Never apply the latest look merely because it is current.
 15. **Existing systems are binding.** When the user supplies an approved design specification, token set, component library, or brand system, treat it as the governing constraint. Shared tokens are read-only unless the user explicitly authorizes a scoped change.
+16. **Prove visual decisions visually.** When approval depends on look, composition, material, or motion, show the smallest representative rendered proof before expensive production. Do not ask a client to choose a visual direction from prose alone.
+17. **Capability claims must be truthful.** Adapt the proof and production method to the tools actually available. A written art-direction specification is not a rendered, interaction-tested result.
 
 ## Select the engagement mode
 
@@ -38,6 +40,7 @@ Create experiences that are useful, comprehensible, emotionally intentional, vis
 | Create a design system | System | foundations, tokens, components, patterns, governance |
 | Specify a screen or feature | Product design | flows, responsive screens, interactions, states, annotations |
 | Build a prototype/test | Validation | research question, scoped prototype, tasks, success evidence |
+| Produce a runnable visual artifact | Production proof | representative render, runtime assumptions, interaction/render checks, evidence bundle |
 | Review a design | Critique | intent-based findings, severity, recommendations, verdict |
 | Redesign an existing product | Redesign | audit, preservation rules, target direction, migration plan |
 | Hand off to engineering | Handoff | component/behavior specs, assets, accessibility, QA criteria |
@@ -61,6 +64,7 @@ Collect or infer:
 - Research scope: terms to disambiguate, period/place/medium boundaries, source availability, image rights, and currentness requirements
 - Accessibility, language, cultural, regulatory, and performance needs
 - Artifact being created and decision it must enable
+- Available research, image, rendering, browser, code, and inspection capabilities; target runtime; and the smallest truthful proof the reviewer can evaluate
 
 State a one-line design intent:
 
@@ -93,6 +97,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Synthesize mechanisms before making a moodboard: composition, typography, palette, material, texture, imagery, symbolism, motion, emotional register, cultural meaning, and common misreadings.
 - Translate the mechanisms into readable digital rules rather than copying motifs. Preserve content hierarchy, interaction clarity, accessibility, responsiveness, and performance.
 - Read [aesthetic-discovery-research.md](references/aesthetic-discovery-research.md) before any research-led art direction or culturally/historically specific design.
+- Read [visual-craft-grammar.md](references/visual-craft-grammar.md) when the decision depends especially on color, composition, motion, interaction expression, or translating a curated inspiration feed into reusable principles.
 
 ### 1. Understand the experience
 
@@ -113,9 +118,11 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 ### 3. Explore and choose a direction
 
 - Do not generate final directions until the taste profile and research synthesis are credible for the ambition and cultural stakes.
-- Extract brand truth from real artifacts when available; distinguish evidence from inference.
-- Generate two or three materially different concepts using named axes such as restrained/expressive, technical/human, dense/airy, familiar/novel.
+- Extract brand truth from verified real artifacts when available; distinguish evidence from inference. An approved specification remains authoritative when an asset, shipped example, or external reference conflicts with it.
+- Generate the fewest materially different concepts needed to resolve the decision, normally two or three, using named axes such as restrained/expressive, technical/human, dense/airy, familiar/novel. A low-risk conformance task may need one compliant baseline; a flagship or identity-defining decision normally needs three directions.
 - For each concept, explain the audience fit, emotional effect, system implications, accessibility risk, and failure mode.
+- When the decision is substantially visual, render representative proofs using the same content and context. Include a signature moment and a mundane utility state where relevant; text-only style descriptions are insufficient evidence.
+- Record the selected direction, rejected alternatives, decision owner, evidence, permitted mix-and-match elements, and revisit trigger when the choice is costly to reverse or must survive across sessions.
 - Choose one concept and define what will remain deliberately plain so the distinctive move has contrast.
 - Read [brand-and-visual-language.md](references/brand-and-visual-language.md) for brand extraction, art direction, typography, color, layout, image, icon, or voice work.
 - For high-visual, premium, editorial, experimental, launch, portfolio, or art-direction work, read [aesthetic-governor.md](references/aesthetic-governor.md) before selecting a direction. Do not accept the first plausible concept.
@@ -142,6 +149,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Preserve one shape, surface, and motion logic across the product.
 - Run the craft loop at the requested ambition level. Judge silhouette, typography, composition, rhythm, material, imagery, motion, and micro-detail separately before judging the whole.
 - For `authored` or `inevitable` ambition, show how the result remains recognizable after removing the logo and how it avoids collapsing into a current template family.
+- Use [visual-craft-grammar.md](references/visual-craft-grammar.md) to define palette topology, negative-space behavior, focal geometry, motion continuity, and the boundary between expressive shell and conventional interaction core.
 
 ### 6. Design interaction, cognition, and emotion
 
@@ -165,9 +173,11 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 
 - State the research question before choosing fidelity.
 - Prototype only the paths and behaviors needed to answer it.
+- Use the smallest truthful proof: graybox for structure, a representative high-fidelity screen for visual language, two representative slides before a full deck, or rendered keyframes before long-form motion. Do not use low-fidelity placeholders to claim that an aesthetic direction has been proven.
 - Write realistic, non-leading tasks and observable success criteria.
 - Test comprehension, task success, recovery, confidence, and emotional response with appropriate participants.
 - Separate observed issues from interpretation and design preference.
+- Read [artifact-production-validation.md](references/artifact-production-validation.md) when producing HTML prototypes, interactive comparisons, decks, motion, or other renderable deliverables.
 
 ### 9. Critique, hand off, and verify
 
@@ -175,6 +185,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Prioritize by effect on the user outcome, frequency, severity, and recovery—not reviewer taste.
 - Annotate non-obvious behavior, tokens, states, content bounds, assets, and accessibility.
 - Compare implementation against behavior and system intent across states and breakpoints, not screenshot similarity alone.
+- For runnable artifacts, verify that the deliverable opens, renders without blocking errors, survives representative viewports/states, and supports the critical interaction path. Preserve screenshots, logs, or equivalent evidence instead of claiming success from source inspection alone.
 - Read [critique-prototype-handoff.md](references/critique-prototype-handoff.md) for reviews, testing, handoff, or implementation QA.
 
 ## Compose the deliverable
@@ -184,13 +195,13 @@ Lead with the design intent and recommendation. Include only relevant layers:
 1. Audience, task, context, outcome, and target emotion
 2. Evidence, assumptions, and constraints
 3. Existing-system authority, token/component conformance, approved extensions, and deviation status when applicable
-4. Client taste profile, research scope, source coverage, visual corpus findings, and unresolved uncertainties when applicable
+4. Client taste profile, verified brand-asset evidence, research scope, source coverage, visual corpus findings, and unresolved uncertainties when applicable
 5. Experience architecture and state coverage
 6. Chosen design direction and rejected alternatives
 7. Aesthetic thesis, temporal lineage, visual grammar, signature moves, and deliberate restraint
 8. Interaction, content, accessibility, and responsive behavior
-9. Prototype/validation plan or findings
-10. Handoff requirements and QA verdict
+9. Direction approval record and prototype/validation plan or findings
+10. Runtime assumptions, rendered proof, handoff requirements, and QA verdict
 
 Use [artifact-templates.md](references/artifact-templates.md) for reusable design briefs, direction sheets, component specs, screen specs, critiques, and handoffs. Use [canonical-sources.md](references/canonical-sources.md) when current standards or reference implementations matter.
 
@@ -200,9 +211,11 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - **Conformance gate:** the governing specification and version are explicit; every intentional departure is approved, scoped, and recorded.
 - **Token gate:** spacing, size, type, color, radius, border, shadow, motion, breakpoint, and other tokenized decisions resolve to approved tokens or documented technical exceptions; shared tokens have not changed without authorization.
 - **Taste gate:** concrete preferences, rejections, trade-offs, contradictions, and decision authority are understood beyond adjectives.
+- **Asset gate:** named brands and products use verified, rights-aware identity/product/UI assets where those assets carry meaning; missing assets and substitutions are explicit; no asset silently overrides the approved specification.
 - **Research gate:** the scope is disambiguated; primary, scholarly/technical, contemporary, adjacent, and counter-reference evidence is sufficient; claims retain provenance and uncertainty.
 - **Architecture gate:** hierarchy, content, flows, decisions, states, and recovery are complete.
 - **Direction gate:** the chosen concept has rationale, contrast, and a coherent visual grammar—not trend labels alone.
+- **Proof gate:** a materially visual decision is approved from representative visual evidence, not prose alone; the proof matches the medium and includes an ordinary state as well as a showcase moment when relevant.
 - **Authorship gate:** high-visual work reaches the declared ambition level, remains recognizable without its logo, and contains choices specific to this brand/content/context.
 - **Trend gate:** any period or current trend has a stated lineage, functional role, adaptation, saturation/expiry risk, and live source date.
 - **System gate:** tokens, components, patterns, content limits, variants, states, responsiveness, and governance align.
@@ -210,6 +223,7 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - **Inclusion gate:** semantic structure, contrast, input modes, focus, announcements, motion, zoom, localization, and RTL needs are addressed.
 - **Emotion gate:** the intended feeling is tied to moments and mechanisms and does not reduce user agency.
 - **Reality gate:** representative content, edge states, prototype evidence, feasibility, and implementation QA are included.
+- **Execution gate:** runnable artifacts have been opened, rendered, inspected, and exercised on the critical path in the actual available runtime, with limitations stated honestly.
 
 ## Anti-patterns
 
@@ -218,6 +232,9 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - Do not introduce raw or near-token values because they look close enough. If the approved spacing system provides 12, 16, 20, and 24, values such as 15, 21, and 23 are violations, not refinement.
 - Do not detach components, fork local copies, or add one-off variants when an approved component contract covers the need.
 - Do not start visual direction from a single reference, one search query, an unsourced moodboard, or the client's adjectives alone.
+- Do not ask a client to approve a materially visual direction from labels or prose when a representative render can be produced.
+- Do not force three full directions, extensive research, or a heavy approval ceremony onto every task; scale exploration and gate artifacts to reversibility, business risk, visual stakes, and existing-system certainty.
+- Do not let official or real-world brand assets silently overrule an approved specification or token contract. Treat conflicts as decisions to resolve, not permission to drift.
 - Do not collapse a historical culture, a later revival, and a contemporary commercial style into one aesthetic label.
 - Do not copy surface motifs before understanding their material, compositional, symbolic, and cultural roles.
 - Do not use a named trend as a complete art direction; extract, mutate, and bound it.
@@ -229,6 +246,7 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - Do not use color, motion, or novelty as a substitute for hierarchy.
 - Do not hide critical information through progressive disclosure.
 - Do not use placeholders as labels or design only the successful state.
+- Do not invent product screenshots, metrics, testimonials, awards, or brand facts to make a visual artifact look complete. Use verified content or honest placeholders.
 - Do not make accessibility a final audit or rely on automated checks alone.
 - Do not praise or criticize aesthetics without connecting them to intent and user impact.
 - Do not use dark patterns to improve conversion or engagement.
