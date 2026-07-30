@@ -4,7 +4,7 @@
   "skill": {
     "name": "design-grandmaster",
     "display_name": "设计宗师",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "repository": "https://github.com/qlhouseClub/design-grandmaster",
     "publisher": {
       "name": "qlhouseClub",
@@ -21,8 +21,10 @@
       "ux",
       "brand",
       "visual-research",
+      "visual-inheritance",
       "taste",
       "color",
+      "typography",
       "layout",
       "motion",
       "interaction",
@@ -30,7 +32,8 @@
     ],
     "default_prompts": [
       "用设计宗师在不改变现有 Design Token 的前提下完成这个功能设计。",
-      "用设计宗师先研究客户审美与视觉语境，再提出可落地的设计方向。"
+      "用设计宗师先研究客户审美与视觉语境，再提出可落地的设计方向。",
+      "用设计宗师审查这次改版是否承袭原项目的视觉语言，并检查代码值、排版和间距漂移。"
     ]
   }
 }

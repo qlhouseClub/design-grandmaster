@@ -1,6 +1,6 @@
 ---
 name: design-grandmaster
-description: "Adaptive, end-to-end design direction and execution combining existing-design-spec conformance, Design Token governance, business and UX reasoning, client taste discovery, visual research, high-craft aesthetic judgment, visual trend and period literacy, atomic design, brand, accessibility, prototyping, critique, and handoff. Use for 既有设计规范遵循、Design Token审计、组件库内设计、客户审美分析、全网视觉调研、高级审美、历史或文化风格转译、视觉潮流、品牌视觉、UI/UX、交互、设计系统、体验审查、改版、原型、组件规范，or when work must remain system-compliant, coherent, accessible, build-ready, and visually authored without unauthorized design-system drift."
+description: "Adaptive, end-to-end design direction and execution combining existing-design-spec conformance, Design Token governance, visual-language inheritance, coded-value auditing, brand/UI/UX typography and layout, business and UX reasoning, client taste discovery, visual research, high-craft aesthetic judgment, visual trend and period literacy, atomic design, brand, accessibility, prototyping, critique, and handoff. Use for 既有设计规范遵循、Design Token审计、改版语言承袭、样式共性与权重、代码视觉值审计、文字排版、品牌/UI/UX布局、组件库内设计、客户审美分析、全网视觉调研、高级审美、历史或文化风格转译、视觉潮流、品牌视觉、交互、设计系统、体验审查、改版、原型、组件规范，or when work must remain system-compliant, coherent, accessible, build-ready, and visually authored without unauthorized design-system drift."
 ---
 
 # Design Grandmaster
@@ -26,6 +26,7 @@ Create experiences that are useful, comprehensible, emotionally intentional, vis
 15. **Existing systems are binding.** When the user supplies an approved design specification, token set, component library, or brand system, treat it as the governing constraint. Shared tokens are read-only unless the user explicitly authorizes a scoped change.
 16. **Prove visual decisions visually.** When approval depends on look, composition, material, or motion, show the smallest representative rendered proof before expensive production. Do not ask a client to choose a visual direction from prose alone.
 17. **Capability claims must be truthful.** Adapt the proof and production method to the tools actually available. A written art-direction specification is not a rendered, interaction-tested result.
+18. **Inheritance before reinvention.** In a redesign, distinguish approved rules, strong recurring grammar, contextual expression, and shipped drift before changing form. Permission to redesign is not permission to create a new system.
 
 ## Emoji and icon policy
 
@@ -92,6 +93,7 @@ If the brief is ambiguous but a safe inference is possible, declare it and proce
 - When an existing user-approved specification, token library, component library, or brand system exists, activate **Conformance mode** before drawing or coding. Record its version and authority; do not silently replace it with external best practice or personal taste.
 - Treat global, primitive, semantic, and other shared Design Tokens as read-only. Selection and composition are allowed; changing a value, name, alias, role, scale, or mode requires explicit scoped authorization.
 - Read [design-system-conformance.md](references/design-system-conformance.md) before producing work governed by an existing design specification.
+- For redesigns or coded UI changes, read [visual-inheritance-typography-and-layout.md](references/visual-inheritance-typography-and-layout.md) before high-fidelity work. Freeze the existing language, separate authority from repeated drift, weight common expressions, and create an inheritance contract.
 
 ### 0A. Discover the client's taste and research the field when warranted
 
@@ -141,7 +143,9 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 ### 4. Build the atomic system
 
 - If a system already exists, use the order `reuse -> compose -> permitted local variant -> proposed extension -> authorized shared change`. Do not create a new token or component because the existing choice feels less aesthetically convenient.
+- Do not create a new design specification, parallel token layer, theme vocabulary, or reusable visual rule unless the user explicitly authorizes that scope. Keep future-system proposals separate from shipping work under the current system.
 - Resolve every measurable design decision to an approved token, component property, platform rule, or documented exception. A spacing scale based on 4 does not permit arbitrary near-values such as 15, 21, or 23; membership in the approved token set matters more than approximate visual similarity.
+- Audit coded color, type, spacing, dimensions, surface, icon, and motion values across modes, states, breakpoints, SVG, and third-party components. A repeated literal is evidence to investigate, not a new rule.
 - Define foundations and tokens before proliferating components.
 - Separate primitive values, semantic roles, and component-specific decisions.
 - Compose atoms/components into single-purpose groups, domain patterns, templates, and representative pages.
@@ -154,12 +158,15 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Establish hierarchy through type, space, scale, alignment, color, contrast, and placement before decoration.
 - Use a deliberate grid and spacing rhythm; break it only to express a defined priority.
 - Give every color a semantic role and usage rule.
-- Treat typography as voice plus information architecture: family, scale, weight, measure, leading, hierarchy, numerals, and language coverage.
+- Treat typography as brand voice, UI system, and UX information architecture together: family, scale, weight, measure, leading, tracking, hierarchy, numerals, punctuation, fallback, and language coverage.
+- Verify first-read, scan, and close-read hierarchy; shared axes and optical alignment; CJK/Latin/numeral/icon baselines; line breaking; and realistic wrapping. Do not repair structure with arbitrary offsets.
+- Judge spacing as relationships across inline, component, group, paragraph, section, and page levels. Use approved tokens, but reject combinations whose line, block, letter, or mixed-script rhythm remains visually uncomfortable.
 - Use imagery, illustration, and iconography with one recognizable art direction and honest provenance.
 - Preserve one shape, surface, and motion logic across the product.
 - Run the craft loop at the requested ambition level. Judge silhouette, typography, composition, rhythm, material, imagery, motion, and micro-detail separately before judging the whole.
 - For `authored` or `inevitable` ambition, show how the result remains recognizable after removing the logo and how it avoids collapsing into a current template family.
 - Use [visual-craft-grammar.md](references/visual-craft-grammar.md) to define palette topology, negative-space behavior, focal geometry, motion continuity, and the boundary between expressive shell and conventional interaction core.
+- Use [visual-inheritance-typography-and-layout.md](references/visual-inheritance-typography-and-layout.md) for style weighting, code-value audits, typography, mixed-script craft, alignment, spacing comfort, and brand/UI/UX layout conflicts.
 
 ### 6. Design interaction, cognition, and emotion
 
@@ -204,7 +211,7 @@ Lead with the design intent and recommendation. Include only relevant layers:
 
 1. Audience, task, context, outcome, and target emotion
 2. Evidence, assumptions, and constraints
-3. Existing-system authority, token/component conformance, approved extensions, and deviation status when applicable
+3. Existing-system authority, inheritance contract, style-value weights, token/component conformance, approved extensions, and deviation status when applicable
 4. Client taste profile, verified brand-asset evidence, research scope, source coverage, visual corpus findings, and unresolved uncertainties when applicable
 5. Experience architecture and state coverage
 6. Chosen design direction and rejected alternatives
@@ -219,7 +226,11 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 
 - **Intent gate:** a specific audience, job, context, outcome, emotion, and critical failure are explicit.
 - **Conformance gate:** the governing specification and version are explicit; every intentional departure is approved, scoped, and recorded.
+- **Inheritance gate:** redesign work distinguishes approved anchors, recurring grammar, contextual expression, and drift; no new shared or parallel specification is created without authorization.
 - **Token gate:** spacing, size, type, color, radius, border, shadow, motion, breakpoint, and other tokenized decisions resolve to approved tokens or documented technical exceptions; shared tokens have not changed without authorization.
+- **Code-value gate:** consequential coded values across colors, typography, spacing, surfaces, icons, motion, modes, states, and breakpoints map to approved roles or documented exceptions.
+- **Typography gate:** semantic hierarchy, brand voice, UI legibility, UX reading order, wrapping, alignment, line height, tracking, mixed-script baselines, and realistic content have been verified.
+- **Layout gate:** grid, focal order, grouping, negative space, block/line/letter spacing, density, responsive behavior, and brand/UI/UX priorities form one comfortable hierarchy.
 - **Taste gate:** concrete preferences, rejections, trade-offs, contradictions, and decision authority are understood beyond adjectives.
 - **Asset gate:** named brands and products use verified, rights-aware identity/product/UI assets where those assets carry meaning; missing assets and substitutions are explicit; no asset silently overrides the approved specification.
 - **Symbol gate:** every deliverable is free of emoji decoration unless explicitly requested; any icons reuse the approved set or a project-consistent SVG grammar.
@@ -240,7 +251,10 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 
 - Do not start with a trendy visual style before understanding the task and audience.
 - Do not reinterpret, rename, rescale, re-alias, or overwrite shared Design Tokens without explicit authorization.
+- Do not treat a redesign brief as authorization to create a new design system, parallel visual specification, token vocabulary, or reusable code rule.
 - Do not introduce raw or near-token values because they look close enough. If the approved spacing system provides 12, 16, 20, and 24, values such as 15, 21, and 23 are violations, not refinement.
+- Do not promote a frequently copied literal, legacy override, third-party default, or visual accident into the project language merely because it appears often.
+- Do not create type hierarchy through arbitrary sizes, weights, offsets, tracking, or spacing; and do not judge alignment, rhythm, or mixed-script composition from ideal short content alone.
 - Do not detach components, fork local copies, or add one-off variants when an approved component contract covers the need.
 - Do not start visual direction from a single reference, one search query, an unsourced moodboard, or the client's adjectives alone.
 - Do not ask a client to approve a materially visual direction from labels or prose when a representative render can be produced.
