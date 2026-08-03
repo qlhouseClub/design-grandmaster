@@ -43,6 +43,7 @@ jobs:
               "CONTRIBUTING.md",
               "THIRD_PARTY_NOTICES.md",
               "COMPATIBILITY.md",
+              "references/layout-intelligence-and-freshness.md",
           )
           for relative in required:
               assert (root / relative).is_file(), f"missing {relative}"
@@ -56,6 +57,17 @@ jobs:
           assert frontmatter["name"] == manifest["skill"]["name"]
           assert isinstance(openai, dict) and openai
           assert manifest["skill"]["repository"].startswith("https://github.com/")
+          readme = (root / "README.md").read_text(encoding="utf-8")
+          assert f"v{manifest['skill']['version']}" in readme, "current version missing from README"
+          governance_markers = (
+              "No authority, no final styling.",
+              "layout-intelligence-and-freshness.md",
+              "Authority gate:",
+              "Convergence gate:",
+              "Mobile-composition gate:",
+          )
+          for marker in governance_markers:
+              assert marker in skill_text, f"layout governance marker missing: {marker}"
           print("Metadata and public files are valid.")
           PY
 

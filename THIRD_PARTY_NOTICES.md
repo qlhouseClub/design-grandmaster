@@ -9,10 +9,10 @@ Design Grandmaster is distributed under the repository's [MIT License](LICENSE).
 
 ## Research-only references
 
-The repository also links to public design curation, product libraries, standards, galleries, platform guidance, and historical or cultural sources, including Dreameryanyan, Mobbin, Lapa Ninja, Codrops, W3C, Apple, Google, Microsoft, Primer, museums, archives, and scholarly publications.
+The repository also links to public design curation, product libraries, standards, galleries, platform guidance, and historical or cultural sources, including Dreameryanyan, Mobbin, Lapa Ninja, Codrops, SiteInspire, BP&O, Fonts In Use, Are.na, W3C, Apple, Google, Microsoft, Primer, museums, archives, and scholarly publications.
 
 Those links are discovery and verification sources. Their images, screenshots, fonts, logos, articles, datasets, and brand assets are not redistributed by this repository and remain subject to their original rights and terms. A link or visual observation does not grant permission to copy a work.
 
 External names and links are provided for attribution and research traceability, not to imply endorsement or affiliation. Verify the upstream version, license, asset rights, and platform guidance before reuse.
 
-Last reviewed: 2026-07-23.
+Last reviewed: 2026-08-03.

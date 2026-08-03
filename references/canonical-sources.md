@@ -47,8 +47,14 @@ Use different sources for different kinds of evidence:
 - Codrops Creative Hub and motion/development examples: https://tympanus.net/codrops/hub/
 - GC Minimal Zine Poster open-source editorial experiment: https://github.com/LiamGvchi/gc-minimal-zine-poster
 - Huashu Design open-source visual production workflow: https://github.com/alchaincyf/huashu-design
+- SiteInspire curated web-design showcase: https://www.siteinspire.com/
+- BP&O live archive of identity and graphic-design criticism: https://bpando.org/
+- Fonts In Use independent archive of typography in context: https://fontsinuse.com/
+- Are.na creative-research channels and source collections: https://www.are.na/
 
 Social curation is a discovery surface, not final authority. Follow quoted work to the original creator, project, code, studio, or product; inspect the visual artifact; and record what was directly observed versus inferred. Use real product libraries to study feasibility and interaction patterns, expressive galleries to expand the possibility space, and implementation sources to verify how motion or interaction actually behaves.
+
+For composition work, route these sources through [layout-intelligence-and-freshness.md](layout-intelligence-and-freshness.md). A gallery can show a current production silhouette but cannot establish product usability; an editorial archive can prove type-image craft but not a complete application state model. Always pair category evidence, adjacency, and counter-reference, then follow important examples to the original work.
 
 ### Dreameryanyan research snapshot
 

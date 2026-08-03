@@ -1,6 +1,6 @@
 ---
 name: design-grandmaster
-description: "Adaptive, end-to-end design direction and execution combining existing-design-spec conformance, Design Token governance, visual-language inheritance, coded-value auditing, brand/UI/UX typography and layout, business and UX reasoning, client taste discovery, visual research, high-craft aesthetic judgment, visual trend and period literacy, atomic design, brand, accessibility, prototyping, critique, and handoff. Use for 既有设计规范遵循、Design Token审计、改版语言承袭、样式共性与权重、代码视觉值审计、文字排版、品牌/UI/UX布局、组件库内设计、客户审美分析、全网视觉调研、高级审美、历史或文化风格转译、视觉潮流、品牌视觉、交互、设计系统、体验审查、改版、原型、组件规范，or when work must remain system-compliant, coherent, accessible, build-ready, and visually authored without unauthorized design-system drift."
+description: "Adaptive, end-to-end design direction and execution combining existing-design-spec conformance, Design Token governance, visual-language inheritance, coded-value auditing, brand/UI/UX typography and layout, business and UX reasoning, client taste discovery, live visual research, layout freshness and anti-convergence, high-craft aesthetic judgment, visual trend and period literacy, atomic design, brand, accessibility, prototyping, critique, and handoff. Use for 既有设计规范遵循、Design Token审计、改版语言承袭、样式共性与权重、代码视觉值审计、文字排版、品牌/UI/UX布局、无规范自动调研、版式语法、版式新鲜度、模板收敛检测、移动端重构、组件库内设计、客户审美分析、全网视觉调研、高级审美、历史或文化风格转译、视觉潮流、品牌视觉、交互、设计系统、体验审查、改版、原型、组件规范，or when work must remain system-compliant, coherent, accessible, build-ready, and visually authored without unauthorized design-system drift or habitual agent styling."
 ---
 
 # Design Grandmaster
@@ -27,6 +27,8 @@ Create experiences that are useful, comprehensible, emotionally intentional, vis
 16. **Prove visual decisions visually.** When approval depends on look, composition, material, or motion, show the smallest representative rendered proof before expensive production. Do not ask a client to choose a visual direction from prose alone.
 17. **Capability claims must be truthful.** Adapt the proof and production method to the tools actually available. A written art-direction specification is not a rendered, interaction-tested result.
 18. **Inheritance before reinvention.** In a redesign, distinguish approved rules, strong recurring grammar, contextual expression, and shipped drift before changing form. Permission to redesign is not permission to create a new system.
+19. **No authority, no final styling.** If no approved system, useful user reference, or researched direction exists, mark aesthetic authority unresolved and automatically run proportional reference research before resolving final layout, palette, display type, imagery, or material.
+20. **Composition must defeat the agent's defaults.** Compare materially different grayscale silhouettes and audit the selected layout fingerprint. Color, imagery, motion, and effects may not disguise a repeated template.
 
 ## Emoji and icon policy
 
@@ -46,6 +48,7 @@ Apply this policy to prose, specifications, prototypes, interfaces, decks, diagr
 | Learn a client and a visual field before designing | Aesthetic discovery | taste profile, research map, source ledger, visual corpus, synthesis |
 | Turn a brief into a design direction | Direction | design read, principles, concepts, chosen visual grammar |
 | Demand exceptional visual quality | Aesthetic governance | reference matrix, aesthetic dials, competing directions, jury verdict, craft passes |
+| Prevent generic or dated composition | Layout intelligence | authority state, live category field, silhouette proofs, layout fingerprints, mobile recomposition, freshness verdict |
 | Explore a period or current trend | Trend direction | lineage, current signal check, trend passport, adapted system, expiry risk |
 | Plan an experience | UX architecture | journey, IA, flow, states, content hierarchy |
 | Create a design system | System | foundations, tokens, components, patterns, governance |
@@ -76,6 +79,7 @@ Collect or infer:
 - Accessibility, language, cultural, regulatory, and performance needs
 - Artifact being created and decision it must enable
 - Available research, image, rendering, browser, code, and inspection capabilities; target runtime; and the smallest truthful proof the reviewer can evaluate
+- Aesthetic authority state: binding system / user-directed / research-derived / unresolved; recent agent or category silhouettes that must not be repeated by habit
 
 State a one-line design intent:
 
@@ -95,9 +99,13 @@ If the brief is ambiguous but a safe inference is possible, declare it and proce
 - Read [design-system-conformance.md](references/design-system-conformance.md) before producing work governed by an existing design specification.
 - For redesigns or coded UI changes, read [visual-inheritance-typography-and-layout.md](references/visual-inheritance-typography-and-layout.md) before high-fidelity work. Freeze the existing language, separate authority from repeated drift, weight common expressions, and create an inheritance contract.
 
-### 0A. Discover the client's taste and research the field when warranted
+### 0A. Resolve aesthetic authority, discover taste, and research the field
 
 Run this before selecting visual directions for brand, campaign, website, redesign, premium, historical, cultural, trend-led, or unfamiliar-style work. Keep it proportional for purely structural UX tasks.
+
+- Classify aesthetic authority as `binding-system`, `user-directed`, `research-derived`, or `unresolved`. If it is unresolved, automatically begin proportional research before high-fidelity styling. Structural UX work may proceed in grayscale, but unresolved taste is not permission to use the agent's preferred palette or layout.
+- For a complete application without an approved visual authority, inspect a bounded field of direct products, category leaders, adjacent solutions, mobile and ordinary states, and counter-references. For high-visual or identity-defining work, expand into a deeper cross-medium corpus.
+- Do not default to dark fields, fluorescent green, blue-purple gradients, monospace labels, glass, oversized empty heroes, split hero layouts, floating proof cards, card mosaics, or alternating bands. Any of them may be used only when project evidence and a positive thesis justify the choice.
 
 - Learn taste from the client's own work, admired examples, rejected examples, adjacent cultural references, and forced visual trade-offs. Ask what mechanism creates the reaction; do not stop at “premium,” “modern,” “Chinese,” or “bold.”
 - Separate personal preference, desired brand identity, audience expectation, and category convention. Record contradictions and who has decision authority.
@@ -110,6 +118,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Translate the mechanisms into readable digital rules rather than copying motifs. Preserve content hierarchy, interaction clarity, accessibility, responsiveness, and performance.
 - Read [aesthetic-discovery-research.md](references/aesthetic-discovery-research.md) before any research-led art direction or culturally/historically specific design.
 - Read [visual-craft-grammar.md](references/visual-craft-grammar.md) when the decision depends especially on color, composition, motion, interaction expression, or translating a curated inspiration feed into reusable principles.
+- Read [layout-intelligence-and-freshness.md](references/layout-intelligence-and-freshness.md) before final composition when no visual authority exists, when the user asks for contemporary/fresh layout, or when recent outputs appear generic, dated, or repetitive.
 
 ### 1. Understand the experience
 
@@ -134,6 +143,8 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Generate the fewest materially different concepts needed to resolve the decision, normally two or three, using named axes such as restrained/expressive, technical/human, dense/airy, familiar/novel. A low-risk conformance task may need one compliant baseline; a flagship or identity-defining decision normally needs three directions.
 - For each concept, explain the audience fit, emotional effect, system implications, accessibility risk, and failure mode.
 - When the decision is substantially visual, render representative proofs using the same content and context. Include a signature moment and a mundane utility state where relevant; text-only style descriptions are insufficient evidence.
+- Before color and material can influence the verdict, compare grayscale silhouettes. A standard unresolved layout normally needs two materially different structures; a flagship or identity-defining decision normally needs three. The structures must differ in consequential composition axes, not merely color, imagery, radius, or card order.
+- Record a compact layout fingerprint for each candidate and compare it with direct competitors, counter-references, recent agent outputs when available, and the other candidates. If the same compound template recurs without project-specific evidence, reject it and regenerate from a different canvas, sequence, information unit, density curve, or navigation model.
 - Record the selected direction, rejected alternatives, decision owner, evidence, permitted mix-and-match elements, and revisit trigger when the choice is costly to reverse or must survive across sessions.
 - Choose one concept and define what will remain deliberately plain so the distinctive move has contrast.
 - Read [brand-and-visual-language.md](references/brand-and-visual-language.md) for brand extraction, art direction, typography, color, layout, image, icon, or voice work.
@@ -167,6 +178,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - For `authored` or `inevitable` ambition, show how the result remains recognizable after removing the logo and how it avoids collapsing into a current template family.
 - Use [visual-craft-grammar.md](references/visual-craft-grammar.md) to define palette topology, negative-space behavior, focal geometry, motion continuity, and the boundary between expressive shell and conventional interaction core.
 - Use [visual-inheritance-typography-and-layout.md](references/visual-inheritance-typography-and-layout.md) for style weighting, code-value audits, typography, mixed-script craft, alignment, spacing comfort, and brand/UI/UX layout conflicts.
+- Use [layout-intelligence-and-freshness.md](references/layout-intelligence-and-freshness.md) for current category research, layout grammar, silhouette competition, anti-convergence fingerprints, and mobile recomposition.
 
 ### 6. Design interaction, cognition, and emotion
 
@@ -231,6 +243,10 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - **Code-value gate:** consequential coded values across colors, typography, spacing, surfaces, icons, motion, modes, states, and breakpoints map to approved roles or documented exceptions.
 - **Typography gate:** semantic hierarchy, brand voice, UI legibility, UX reading order, wrapping, alignment, line height, tracking, mixed-script baselines, and realistic content have been verified.
 - **Layout gate:** grid, focal order, grouping, negative space, block/line/letter spacing, density, responsive behavior, and brand/UI/UX priorities form one comfortable hierarchy.
+- **Authority gate:** final visual treatment is governed by an approved system, explicit user direction, or dated project research; unresolved authority has not been replaced by the agent's aesthetic defaults.
+- **Layout-freshness gate:** time-sensitive claims have current evidence; category conventions and counter-references were inspected; the selected structure is specific for a meaningful reason rather than a fashionable or historical template reflex.
+- **Convergence gate:** candidate silhouettes are materially different; compound layout and palette defaults were fingerprinted; repeated recent-agent or category signatures are justified or rejected.
+- **Mobile-composition gate:** hierarchy, order, navigation, density, media, interaction, and ordinary states were deliberately recomposed and verified rather than mechanically stacked.
 - **Taste gate:** concrete preferences, rejections, trade-offs, contradictions, and decision authority are understood beyond adjectives.
 - **Asset gate:** named brands and products use verified, rights-aware identity/product/UI assets where those assets carry meaning; missing assets and substitutions are explicit; no asset silently overrides the approved specification.
 - **Symbol gate:** every deliverable is free of emoji decoration unless explicitly requested; any icons reuse the approved set or a project-consistent SVG grammar.
@@ -257,6 +273,10 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - Do not create type hierarchy through arbitrary sizes, weights, offsets, tracking, or spacing; and do not judge alignment, rhythm, or mixed-script composition from ideal short content alone.
 - Do not detach components, fork local copies, or add one-off variants when an approved component contract covers the need.
 - Do not start visual direction from a single reference, one search query, an unsourced moodboard, or the client's adjectives alone.
+- Do not treat missing references or missing design specifications as permission to begin from the agent's habitual style. Automatically establish a proportional category, adjacency, and counter-reference field first.
+- Do not call a layout contemporary, modern, fresh, or current without dated live evidence when research tools are available.
+- Do not present multiple layout directions whose silhouettes, information units, section sequence, and mobile transformation are substantially the same.
+- Do not use color, glass, texture, large type, motion, or unusual imagery to conceal a generic split hero, metrics strip, card grid, alternating-band sequence, or mechanical mobile stack.
 - Do not ask a client to approve a materially visual direction from labels or prose when a representative render can be produced.
 - Do not force three full directions, extensive research, or a heavy approval ceremony onto every task; scale exploration and gate artifacts to reversibility, business risk, visual stakes, and existing-system certainty.
 - Do not let official or real-world brand assets silently overrule an approved specification or token contract. Treat conflicts as decisions to resolve, not permission to drift.

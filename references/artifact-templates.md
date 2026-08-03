@@ -226,6 +226,39 @@ Silhouette / grayscale / content stress / logo-off / mundane screen / peer lineu
 ## Revisit trigger and unresolved human art-direction decisions
 ```
 
+## Layout decision record
+
+```markdown
+# Layout Decision Record: [initiative]
+
+Authority: binding-system / user-directed / research-derived / unresolved
+Decision / owner / evidence date / temporal stance
+
+## Research field
+Direct category / real product states / adjacency / counter-reference / mobile evidence
+Sources checked / direct observations / stopping reason / currentness limitations
+
+## Content and attention model
+Primary decisions / first-read path / content density / signature moment / mundane state
+
+## Comparable silhouette proofs
+Same content / assets / viewports / grayscale-value structure
+
+| Direction | Canvas/grid | Mass/sequence | Information unit | Density curve | Navigation | Mobile transformation | Fingerprint |
+|---|---|---|---|---|---|---|---|
+
+## Convergence audit
+Category defaults / recent-agent defaults / compound matches / justification or rejection
+
+## Decision
+Selected grammar / project-specific mutation / conventional core / rejected alternatives
+
+## Verification
+Thumbnail / grayscale / realistic content / ordinary states / mobile / accessibility / reduced motion
+
+## Expiry risk, unresolved questions, and revisit trigger
+```
+
 ## Component specification
 
 ```markdown
