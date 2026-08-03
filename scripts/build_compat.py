@@ -56,6 +56,13 @@ def canonical_files(include_openai_metadata: bool) -> list[tuple[Path, Path]]:
         base = ROOT / folder
         if base.is_dir():
             files.extend((path, path.relative_to(ROOT)) for path in sorted(base.rglob("*")) if path.is_file())
+    scripts = ROOT / "scripts"
+    if scripts.is_dir():
+        files.extend(
+            (script, script.relative_to(ROOT))
+            for script in sorted(scripts.iterdir())
+            if script.is_file() and script.name != "build_compat.py"
+        )
     if include_openai_metadata:
         base = ROOT / "agents"
         if base.is_dir():

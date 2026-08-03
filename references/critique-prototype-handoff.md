@@ -93,6 +93,7 @@ Check:
 - Realistic final content and extreme lengths
 - Complete states and interactions
 - Responsive and zoom behavior
+- Viewport/region/component safe areas, partial clipping, document overflow, scroll endpoints, and sticky/fixed boundary behavior
 - Contrast, focus, keyboard, semantics, accessible names, announcements, touch targets, reduced motion
 - Exportable assets and implementation notes
 - Requirement coverage and explicit approval status
@@ -123,6 +124,7 @@ Compare design and build across:
 - Component behavior and all states
 - Keyboard, focus, screen reader, motion preference
 - Content overflow and localization
+- Non-decorative boundary safety and horizontal-scroll axis isolation
 - Loading, latency, errors, offline/timeout
 - Performance and layout stability
 - Analytics/identifiers only when part of the contract
