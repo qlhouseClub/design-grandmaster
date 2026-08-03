@@ -18,6 +18,8 @@ For each region specify:
 
 Preserve semantic/DOM order across layouts. Do not visually reorder content into a confusing keyboard or screen-reader sequence.
 
+Treat boundary behavior as a responsive contract. Protected text, informative media, functional icons, controls, focus/state cues, and data must remain inside the resolved safe area at every supported width and scroll endpoint. Use [layout-boundary-safety.md](layout-boundary-safety.md) for the geometry and evidence workflow.
+
 ### Adaptation choices
 
 - **Reflow:** same content, new arrangement

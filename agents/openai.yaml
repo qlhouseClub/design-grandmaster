@@ -1,4 +1,4 @@
 interface:
   display_name: "设计宗师"
-  short_description: "严守既有规范与 Token，以调研、版式竞争和审美治理交付高质量设计"
-  default_prompt: "Use $design-grandmaster to preserve approved systems, research unresolved visual authority, compare genuinely different layout silhouettes, and deliver a coherent, accessible, build-ready experience without aesthetic-default convergence."
+  short_description: "严守规范与 Token，以调研、版式竞争和边界审查交付高质量设计"
+  default_prompt: "Use $design-grandmaster to preserve approved systems, research unresolved visual authority, compare genuinely different layout silhouettes, audit non-decorative boundary safety across viewports, and deliver a coherent, accessible, build-ready experience."

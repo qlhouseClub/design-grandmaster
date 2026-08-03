@@ -131,6 +131,8 @@ When the deliverable runs in a browser, verify at minimum:
 7. **Accessibility:** verify keyboard order, visible focus, semantics/names, zoom/text expansion, contrast, and motion preference with appropriate tools and manual inspection.
 8. **Performance:** check layout stability, asset weight, interaction readiness, and animation smoothness in the target context.
 
+For responsive safe areas, non-decorative edge contact, partial clipping, sticky/fixed regions, and horizontal scroll endpoints, use [layout-boundary-safety.md](layout-boundary-safety.md) and run the bundled geometry audit when the runtime supports it.
+
 Automated browser tools can capture screenshots, console output, and repeatable interaction paths, but they do not replace visual inspection or accessibility judgment. If automation is unavailable, perform a manual run and state what was not verified.
 
 ## 8. Deck, data, and motion proof

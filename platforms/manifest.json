@@ -4,14 +4,14 @@
   "skill": {
     "name": "design-grandmaster",
     "display_name": "设计宗师",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "repository": "https://github.com/qlhouseClub/design-grandmaster",
     "publisher": {
       "name": "qlhouseClub",
       "url": "https://github.com/qlhouseClub"
     },
     "short_description": "严守设计规范与 Design Token，统筹业务、体验、品牌和高阶审美",
-    "long_description": "在业务与体验约束下完成审美发现、视觉研究、设计系统治理和高完成度设计，并持续遵守已批准的规范与 Design Token。",
+    "long_description": "在业务与体验约束下完成审美发现、视觉研究、设计系统治理、响应式边界审查和高完成度设计，并持续遵守已批准的规范与 Design Token。",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
     "keywords": [
@@ -27,6 +27,8 @@
       "typography",
       "layout",
       "layout-research",
+      "layout-boundary",
+      "safe-area",
       "anti-convergence",
       "motion",
       "interaction",
@@ -35,7 +37,8 @@
     "default_prompts": [
       "用设计宗师在不改变现有 Design Token 的前提下完成这个功能设计。",
       "用设计宗师先研究客户审美与视觉语境，再提出可落地的设计方向。",
-      "用设计宗师审查这次改版是否承袭原项目的视觉语言，并检查代码值、排版和间距漂移。"
+      "用设计宗师审查这次改版是否承袭原项目的视觉语言，并检查代码值、排版和间距漂移。",
+      "用设计宗师审查桌面端与移动端的安全区、非装饰性贴边、横向溢出和滚动裁切。"
     ]
   }
 }

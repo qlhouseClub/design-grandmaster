@@ -44,6 +44,8 @@ jobs:
               "THIRD_PARTY_NOTICES.md",
               "COMPATIBILITY.md",
               "references/layout-intelligence-and-freshness.md",
+              "references/layout-boundary-safety.md",
+              "scripts/audit_layout_boundaries.mjs",
           )
           for relative in required:
               assert (root / relative).is_file(), f"missing {relative}"
@@ -65,11 +67,15 @@ jobs:
               "Authority gate:",
               "Convergence gate:",
               "Mobile-composition gate:",
+              "Boundary-safety gate:",
           )
           for marker in governance_markers:
               assert marker in skill_text, f"layout governance marker missing: {marker}"
           print("Metadata and public files are valid.")
           PY
+
+      - name: Check boundary audit script syntax
+        run: node --check scripts/audit_layout_boundaries.mjs
 
       - name: Build every platform package
         run: python scripts/build_compat.py --platform all

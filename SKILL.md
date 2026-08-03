@@ -1,6 +1,6 @@
 ---
 name: design-grandmaster
-description: "Adaptive, end-to-end design direction and execution combining existing-design-spec conformance, Design Token governance, visual-language inheritance, coded-value auditing, brand/UI/UX typography and layout, business and UX reasoning, client taste discovery, live visual research, layout freshness and anti-convergence, high-craft aesthetic judgment, visual trend and period literacy, atomic design, brand, accessibility, prototyping, critique, and handoff. Use for 既有设计规范遵循、Design Token审计、改版语言承袭、样式共性与权重、代码视觉值审计、文字排版、品牌/UI/UX布局、无规范自动调研、版式语法、版式新鲜度、模板收敛检测、移动端重构、组件库内设计、客户审美分析、全网视觉调研、高级审美、历史或文化风格转译、视觉潮流、品牌视觉、交互、设计系统、体验审查、改版、原型、组件规范，or when work must remain system-compliant, coherent, accessible, build-ready, and visually authored without unauthorized design-system drift or habitual agent styling."
+description: "Adaptive, end-to-end design direction and execution combining existing-design-spec conformance, Design Token governance, visual-language inheritance, coded-value auditing, brand/UI/UX typography and layout, boundary-safe responsive composition, business and UX reasoning, client taste discovery, live visual research, layout freshness and anti-convergence, high-craft aesthetic judgment, visual trend and period literacy, atomic design, brand, accessibility, prototyping, critique, and handoff. Use for 既有设计规范遵循、Design Token审计、改版语言承袭、样式共性与权重、代码视觉值审计、文字排版、品牌/UI/UX布局、双端安全区与非装饰性贴边审查、滚动裁切与横向溢出治理、无规范自动调研、版式语法、版式新鲜度、模板收敛检测、移动端重构、组件库内设计、客户审美分析、全网视觉调研、高级审美、历史或文化风格转译、视觉潮流、品牌视觉、交互、设计系统、体验审查、改版、原型、组件规范，or when work must remain system-compliant, coherent, accessible, build-ready, and visually authored without unauthorized design-system drift, unsafe edge contact, or habitual agent styling."
 ---
 
 # Design Grandmaster
@@ -29,6 +29,7 @@ Create experiences that are useful, comprehensible, emotionally intentional, vis
 18. **Inheritance before reinvention.** In a redesign, distinguish approved rules, strong recurring grammar, contextual expression, and shipped drift before changing form. Permission to redesign is not permission to create a new system.
 19. **No authority, no final styling.** If no approved system, useful user reference, or researched direction exists, mark aesthetic authority unresolved and automatically run proportional reference research before resolving final layout, palette, display type, imagery, or material.
 20. **Composition must defeat the agent's defaults.** Compare materially different grayscale silhouettes and audit the selected layout fingerprint. Color, imagery, motion, and effects may not disguise a repeated template.
+21. **Protect every meaningful edge.** Keep text, informative media, functional icons, controls, focus, data, and state indicators inside an explicit safe area. Only intentional decorative or structural layers may bleed. Verify actual geometry across representative viewports and scroll states rather than trusting source declarations or one screenshot.
 
 ## Emoji and icon policy
 
@@ -49,6 +50,7 @@ Apply this policy to prose, specifications, prototypes, interfaces, decks, diagr
 | Turn a brief into a design direction | Direction | design read, principles, concepts, chosen visual grammar |
 | Demand exceptional visual quality | Aesthetic governance | reference matrix, aesthetic dials, competing directions, jury verdict, craft passes |
 | Prevent generic or dated composition | Layout intelligence | authority state, live category field, silhouette proofs, layout fingerprints, mobile recomposition, freshness verdict |
+| Audit responsive layout boundaries | Boundary QA | safe-area authority, geometry report, clipping/overflow findings, desktop/mobile evidence, retest verdict |
 | Explore a period or current trend | Trend direction | lineage, current signal check, trend passport, adapted system, expiry risk |
 | Plan an experience | UX architecture | journey, IA, flow, states, content hierarchy |
 | Create a design system | System | foundations, tokens, components, patterns, governance |
@@ -80,6 +82,7 @@ Collect or infer:
 - Artifact being created and decision it must enable
 - Available research, image, rendering, browser, code, and inspection capabilities; target runtime; and the smallest truthful proof the reviewer can evaluate
 - Aesthetic authority state: binding system / user-directed / research-derived / unresolved; recent agent or category silhouettes that must not be repeated by habit
+- Safe-area authority: page/region/component tokens, platform insets, approved full-bleed exceptions, supported minimum width, and the containers responsible for edge behavior
 
 State a one-line design intent:
 
@@ -172,6 +175,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Treat typography as brand voice, UI system, and UX information architecture together: family, scale, weight, measure, leading, tracking, hierarchy, numerals, punctuation, fallback, and language coverage.
 - Verify first-read, scan, and close-read hierarchy; shared axes and optical alignment; CJK/Latin/numeral/icon baselines; line breaking; and realistic wrapping. Do not repair structure with arbitrary offsets.
 - Judge spacing as relationships across inline, component, group, paragraph, section, and page levels. Use approved tokens, but reject combinations whose line, block, letter, or mixed-script rhythm remains visually uncomfortable.
+- Separate protected information/interaction content from decorative or structural bleed. Do not allow a color field, sticky rail, dense navigation, full-bleed treatment, or scroll container to erase the governing safe area.
 - Use imagery, illustration, and iconography with one recognizable art direction and honest provenance.
 - Preserve one shape, surface, and motion logic across the product.
 - Run the craft loop at the requested ambition level. Judge silhouette, typography, composition, rhythm, material, imagery, motion, and micro-detail separately before judging the whole.
@@ -192,11 +196,13 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 ### 7. Design for variation and inclusion
 
 - Test small/large viewports, zoom, text expansion, long names, empty/overflow content, slow networks, and alternate inputs.
+- Audit viewport, region, component, and scroll/clipping boundaries at initial and terminal states. A fully offscreen item in an intentional scroller differs from a partially clipped label; the latter is a failure.
 - Define keyboard order, focus behavior, accessible names, announcements, and reduced-motion behavior for interactive patterns.
 - Use native semantics first; use ARIA patterns only with the complete keyboard and state behavior.
 - Support localization, pluralization, flexible layout, CJK, and RTL where relevant.
 - Read [accessibility-content-inclusion.md](references/accessibility-content-inclusion.md) for accessibility, UX writing, localization, or inclusive design.
 - Read [responsive-motion-data.md](references/responsive-motion-data.md) for responsive composition, motion systems, or data visualization.
+- Read [layout-boundary-safety.md](references/layout-boundary-safety.md) for multi-viewport runnable work, sticky/fixed regions, horizontal scrollers, full-bleed treatments, dense navigation, or any critique involving non-decorative edge contact. Run the bundled geometry audit when browser automation is available, then complete optical review manually.
 
 ### 8. Prototype and validate
 
@@ -215,6 +221,7 @@ Run this before selecting visual directions for brand, campaign, website, redesi
 - Annotate non-obvious behavior, tokens, states, content bounds, assets, and accessibility.
 - Compare implementation against behavior and system intent across states and breakpoints, not screenshot similarity alone.
 - For runnable artifacts, verify that the deliverable opens, renders without blocking errors, survives representative viewports/states, and supports the critical interaction path. Preserve screenshots, logs, or equivalent evidence instead of claiming success from source inspection alone.
+- For runnable multi-viewport artifacts, verify document width, zone insets, partial clipping, horizontal-scroll start/end positions, sticky behavior, and scroll-axis isolation before assigning `Ready`.
 - Read [critique-prototype-handoff.md](references/critique-prototype-handoff.md) for reviews, testing, handoff, or implementation QA.
 
 ## Compose the deliverable
@@ -228,7 +235,7 @@ Lead with the design intent and recommendation. Include only relevant layers:
 5. Experience architecture and state coverage
 6. Chosen design direction and rejected alternatives
 7. Aesthetic thesis, temporal lineage, visual grammar, signature moves, and deliberate restraint
-8. Interaction, content, accessibility, and responsive behavior
+8. Interaction, content, accessibility, responsive behavior, safe-area authority, and boundary-audit evidence
 9. Direction approval record and prototype/validation plan or findings
 10. Runtime assumptions, rendered proof, handoff requirements, and QA verdict
 
@@ -243,6 +250,7 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - **Code-value gate:** consequential coded values across colors, typography, spacing, surfaces, icons, motion, modes, states, and breakpoints map to approved roles or documented exceptions.
 - **Typography gate:** semantic hierarchy, brand voice, UI legibility, UX reading order, wrapping, alignment, line height, tracking, mixed-script baselines, and realistic content have been verified.
 - **Layout gate:** grid, focal order, grouping, negative space, block/line/letter spacing, density, responsive behavior, and brand/UI/UX priorities form one comfortable hierarchy.
+- **Boundary-safety gate:** every non-decorative text, informative visual, functional icon, control, focus/state cue, and data mark remains inside its approved viewport/region/component safe area; document overflow, partial clipping, scroll endpoints, sticky/fixed regions, and horizontal-axis behavior have been verified across representative desktop and mobile states.
 - **Authority gate:** final visual treatment is governed by an approved system, explicit user direction, or dated project research; unresolved authority has not been replaced by the agent's aesthetic defaults.
 - **Layout-freshness gate:** time-sensitive claims have current evidence; category conventions and counter-references were inspected; the selected structure is specific for a meaningful reason rather than a fashionable or historical template reflex.
 - **Convergence gate:** candidate silhouettes are materially different; compound layout and palette defaults were fingerprinted; repeated recent-agent or category signatures are justified or rejected.
@@ -271,6 +279,8 @@ Use [artifact-templates.md](references/artifact-templates.md) for reusable desig
 - Do not introduce raw or near-token values because they look close enough. If the approved spacing system provides 12, 16, 20, and 24, values such as 15, 21, and 23 are violations, not refinement.
 - Do not promote a frequently copied literal, legacy override, third-party default, or visual accident into the project language merely because it appears often.
 - Do not create type hierarchy through arbitrary sizes, weights, offsets, tracking, or spacing; and do not judge alignment, rhythm, or mixed-script composition from ideal short content alone.
+- Do not let non-decorative text, icons, controls, data, focus, or meaningful media touch or cross a viewport, region, component, or clipping boundary unless an explicit component/platform contract authorizes it.
+- Do not treat `overflow: hidden`, a clean full-page screenshot, or lack of document-level horizontal overflow as proof of boundary safety. Inspect clipping ancestors and both ends of scroll containers; never reveal half a label or use cross-axis `scrollIntoView()` behavior as a repair.
 - Do not detach components, fork local copies, or add one-off variants when an approved component contract covers the need.
 - Do not start visual direction from a single reference, one search query, an unsourced moodboard, or the client's adjectives alone.
 - Do not treat missing references or missing design specifications as permission to begin from the agent's habitual style. Automatically establish a proportional category, adjacency, and counter-reference field first.

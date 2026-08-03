@@ -1,6 +1,6 @@
 # 跨平台兼容指南
 
-本文档以 2026-07-23 可查到的官方能力为基线。仓库根目录的 `SKILL.md`、`references/` 和 `agents/openai.yaml` 是唯一知识源；平台包由 `scripts/build_compat.py` 生成到 `dist/`，不提交生成物，也不让适配说明进入技能运行上下文。
+本文档以 2026-07-23 可查到的官方能力为基线。仓库根目录的 `SKILL.md`、`references/`、运行审查脚本和 `agents/openai.yaml` 是唯一知识源；平台包由 `scripts/build_compat.py` 生成到 `dist/`，不提交生成物，也不让适配说明进入技能运行上下文。
 
 ## 兼容矩阵
 
@@ -33,6 +33,16 @@ python .\scripts\build_compat.py --platform portable
 脚本在生成前会检查技能名称与本地引用链接。`dist/` 已被 Git 忽略，可随时重建。
 
 正式版本会通过 GitHub Release 提供 TRAE、OpenAI Plugin、扣子和便携 ZIP。Release 产物由版本标签触发自动构建，不手工修改。
+
+## 浏览器边界审查能力
+
+`scripts/audit_layout_boundaries.mjs` 需要 Node.js、Playwright 和可用的 Chrome/Chromium。Codex、TRAE、Hermes 与 OpenClaw 在具备这些运行条件时可以直接执行：
+
+```powershell
+node .\scripts\audit_layout_boundaries.mjs --target <HTML文件或URL>
+```
+
+脚本不可用时，Agent 必须按照 `references/layout-boundary-safety.md` 完成手工双端审查并明确未自动验证的部分。扣子知识库会获得治理规则，但不会假装能够直接运行本地浏览器脚本；如需自动化，应另接浏览器插件或工作流。
 
 ## Codex 与 ChatGPT
 
@@ -137,7 +147,7 @@ python .\scripts\build_compat.py --platform coze
 
 ## 维护规则
 
-1. 专业能力只修改 `SKILL.md` 与 `references/`。
+1. 专业能力只修改 `SKILL.md`、`references/` 与可复用运行审查脚本。
 2. OpenAI 界面元数据只修改 `agents/openai.yaml`。
 3. 扣子的最小行为桥接只修改 `platforms/coze/agent-prompt.md`。
 4. 平台名称、仓库、展示文案与版本只修改 `platforms/manifest.json`。
