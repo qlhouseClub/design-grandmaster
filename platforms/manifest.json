@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "verified_on": "2026-08-03",
+  "verified_on": "2026-08-13",
   "skill": {
     "name": "design-grandmaster",
     "display_name": "设计宗师",
-    "version": "1.4.0",
+    "version": "1.6.0",
     "repository": "https://github.com/qlhouseClub/design-grandmaster",
     "publisher": {
       "name": "qlhouseClub",
       "url": "https://github.com/qlhouseClub"
     },
-    "short_description": "严守设计规范与 Design Token，统筹业务、体验、品牌和高阶审美",
-    "long_description": "在业务与体验约束下完成审美发现、视觉研究、设计系统治理、响应式边界审查和高完成度设计，并持续遵守已批准的规范与 Design Token。",
+    "short_description": "严守规范与 Token，治理混排、创意构图、加载和可定位交付",
+    "long_description": "在业务与体验约束下完成审美发现、视觉研究、设计系统治理、混排与创意构图、渐进式加载裁决、响应式边界审查和可定位交付，并持续遵守已批准的规范与 Design Token。",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
     "keywords": [
@@ -32,13 +32,22 @@
       "anti-convergence",
       "motion",
       "interaction",
-      "visual-production"
+      "visual-production",
+      "theme-translation",
+      "visual-theme",
+      "mixed-script-typography",
+      "creative-composition",
+      "visual-location-map",
+      "progressive-loading"
     ],
     "default_prompts": [
       "用设计宗师在不改变现有 Design Token 的前提下完成这个功能设计。",
       "用设计宗师先研究客户审美与视觉语境，再提出可落地的设计方向。",
       "用设计宗师审查这次改版是否承袭原项目的视觉语言，并检查代码值、排版和间距漂移。",
-      "用设计宗师审查桌面端与移动端的安全区、非装饰性贴边、横向溢出和滚动裁切。"
+      "用设计宗师审查桌面端与移动端的安全区、非装饰性贴边、横向溢出和滚动裁切。",
+      "用设计宗师接入用户提供的外部主题，先核验来源、版本、权利、入口、适配性和规范权威，再映射 Token 并验证签名场景与普通状态。",
+      "用设计宗师审查中英数字与图标混排、文字和图像编排、蒙版定位与伪元素层级，并随交付生成当前批次的视觉定位图。",
+      "用设计宗师判定这个界面的渐进式加载策略，输出资源优先级、稳定占位、无障碍、失败恢复和降级文档。"
     ]
   }
 }

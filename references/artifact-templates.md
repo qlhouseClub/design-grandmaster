@@ -341,6 +341,49 @@ Open/render / console-network / interaction / responsive / accessibility / perfo
 ## Verdict: Ready / Ready with conditions / Not ready
 ```
 
+## Visual location map
+
+Use for runnable page/screen batches expected to receive local visual revisions. Generate the first table from semantic HTML anchors with `scripts/generate_visual_location_map.py` when available; see `visual-location-and-revision-map.md` for the full protocol.
+
+```markdown
+# Visual Location Map — [project / batch]
+
+Batch / date / artifact version / entry point / design-system version
+
+## Locations
+| Marker | Semantic name | Page/state | Source anchor | Implementation owner | Viewport evidence | Status |
+|---|---|---|---|---|---|---|
+| | | | | | | Ready / Changed / Needs review |
+
+## Revision log
+| Marker | Request | Scope | System impact | Result | Evidence |
+|---|---|---|---|---|---|
+| | | | None / component / token proposal | | |
+```
+
+## Progressive loading decision
+
+Use when skill-reference routing is ambiguous or when interface/data loading materially affects comprehension, geometry, accessibility, or interaction readiness. See `progressive-loading-routing.md` for classification and verdict rules.
+
+```markdown
+# Progressive Loading Decision — [task/artifact]
+
+Task / artifact / version / date / decision owner
+
+## Skill knowledge routing
+| Domain decision | Required? | Reference loaded | Why | Evidence/output enabled |
+|---|---|---|---|---|
+| | Required / Conditional / No | | | |
+
+## Interface/data loading
+| Region/resource | User value | Dependency | Verdict | Trigger | Stable placeholder/space | A11y status | Failure/retry | Reduced-data |
+|---|---|---|---|---|---|---|---|---|
+| | | | eager / priority / deferred-visible / on-intent / optional / forbidden-delay | | | | | |
+
+## Verdict
+Ready / Ready with conditions / Not ready
+```
+
 ## Motion director notes
 
 ```markdown

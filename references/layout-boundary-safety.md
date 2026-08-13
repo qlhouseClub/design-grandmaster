@@ -25,6 +25,8 @@ Treat these objects as protected non-decorative content:
 - Brand marks when recognition depends on their complete form and clear space
 - Any element required to understand, navigate, decide, recover, or act
 
+Component boundaries protect internal content as well as the component box. In text-bearing controls, audit the placeholder or selected value, prefix/suffix, clear action, validation mark, native or SVG affordance, and focus indicator separately. A field can sit safely inside the page while its own value is visually pressed against its border.
+
 The following may touch or cross a boundary only when the design intent is explicit:
 
 - Background color or material fields
@@ -52,6 +54,8 @@ When no system exists, use a 4 px grid and start with:
 - `16px` as a hard content floor for compact rails, controls, and utility regions
 - `20px` as the preferred small-screen page/major-region inset
 - `24px` or more for larger page regions when density and content allow
+
+For selects and other value-bearing triggers without an approved component contract, start with `16px` content inset. Reserve the full trailing composition of value-to-icon gap, icon width, and right inset rather than treating the arrow as overlay decoration. Determine the desktop intrinsic width from the localized placeholder/default and longest built-in option, then add those approved internal zones. At narrow widths, cap the control to the owning region and wrap or recompose the group without reducing its internal safe area or clipping the visible value.
 
 These are fallback starting points, not universal style prescriptions. A denser component can use an approved smaller internal inset, while a brand, editorial, or reading surface may need substantially more. Optical comfort can still fail after a numeric pass.
 
@@ -118,6 +122,7 @@ Use these rules:
 
 - Completely offscreen items inside an intentional scroller are not edge violations by themselves.
 - Partially visible text, icons, data, or controls are violations unless the partial object is an explicit, comprehensible affordance and no meaningful glyph or control is clipped.
+- Placeholder or selected-value text touching a field edge is a component-boundary failure even when the control itself fits the viewport. An overlaid select arrow does not excuse a reduced trailing text safe area.
 - If a “peek” communicates more content, reveal a bounded surface, image edge, or masked container—not half a word, number, icon, or focus target.
 - Provide start and end scroll padding so the first and last complete items can rest inside the safe area.
 - Do not shrink touch targets or type below the approved minimum merely to make every item fit.
@@ -143,10 +148,11 @@ Use this sequence:
 1. Identify the nearest container that owns the boundary.
 2. Confirm the governing token, component rule, safe-area value, and breakpoint behavior.
 3. Restore the inset at that container or recompose the region.
-4. For scroll regions, add start/end breathing room and verify complete resting positions.
-5. Preserve minimum touch targets, text size, reading measure, and focus clearance.
-6. Remove axis-coupled scrolling and arbitrary corrective transforms.
-7. Re-run geometry checks and inspect screenshots at the same states.
+4. For value-bearing controls, size from localized default and option content, then reserve explicit start inset, text-to-affordance gap, affordance width, and end inset.
+5. For scroll regions, add start/end breathing room and verify complete resting positions.
+6. Preserve minimum touch targets, text size, reading measure, and focus clearance.
+7. Remove axis-coupled scrolling and arbitrary corrective transforms.
+8. Re-run geometry checks and inspect screenshots at the same states.
 
 Do not repair systemic edge failures with per-child magic margins, negative offsets, text scaling, hidden overflow, arbitrary `calc()` values, or a breakpoint that only matches the current screenshot. Do not convert a local exception into a shared token without authorization.
 
@@ -182,4 +188,3 @@ When browser automation or Playwright is unavailable:
 6. Capture screenshots and record untested states explicitly.
 
 Do not claim geometric verification from source inspection alone. CSS declarations can be overridden, affected by font metrics, changed by runtime content, or invalidated by sticky and overflow behavior.
-

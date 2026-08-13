@@ -49,10 +49,28 @@ def validate_source(manifest: dict) -> None:
     if missing:
         raise FileNotFoundError("Missing local references: " + ", ".join(sorted(set(missing))))
 
+    forbidden_bundles = (
+        ROOT / "examples",
+        ROOT / "references" / "themes",
+        ROOT / "assets" / "themes",
+    )
+    bundled_files = [
+        path.relative_to(ROOT).as_posix()
+        for folder in forbidden_bundles
+        if folder.is_dir()
+        for path in folder.rglob("*")
+        if path.is_file()
+    ]
+    if bundled_files:
+        raise ValueError(
+            "Design Grandmaster must not bundle examples or themes: "
+            + ", ".join(sorted(bundled_files))
+        )
+
 
 def canonical_files(include_openai_metadata: bool) -> list[tuple[Path, Path]]:
     files: list[tuple[Path, Path]] = [(ROOT / "SKILL.md", Path("SKILL.md"))]
-    for folder in ("references", "assets", "templates", "examples"):
+    for folder in ("references", "assets", "templates"):
         base = ROOT / folder
         if base.is_dir():
             files.extend((path, path.relative_to(ROOT)) for path in sorted(base.rglob("*")) if path.is_file())
@@ -189,14 +207,23 @@ def build_coze(output_root: Path, manifest: dict) -> list[Path]:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(source, target)
 
-    import_guide = f"""# 扣子导入说明\n\n1. 新建智能体，将 `agent-prompt.md` 的正文粘贴到系统提示词。\n2. 新建知识库，上传 `knowledge/` 中的全部 Markdown 文件。\n3. 将知识库绑定到智能体，并开启知识检索。\n4. 仅在需要外部动作时再配置插件、工作流、数据库或 API。\n5. 用真实任务测试检索命中、规则遵循、事实标注和输出深度。\n\n生成来源：{skill['repository']}\n"""
+    tool_root = package_root / "scripts"
+    tool_root.mkdir(parents=True, exist_ok=True)
+    scripts = ROOT / "scripts"
+    if scripts.is_dir():
+        for source in sorted(scripts.iterdir()):
+            if source.is_file() and source.name != "build_compat.py":
+                shutil.copy2(source, tool_root / source.name)
+
+    import_guide = f"""# 扣子导入说明\n\n1. 新建智能体，将 `agent-prompt.md` 的正文粘贴到系统提示词。\n2. 新建知识库，上传 `knowledge/` 中的全部 Markdown 文件。\n3. 将知识库绑定到智能体，并开启知识检索。\n4. 仅在需要外部动作时再配置插件、工作流、数据库或 API。\n5. `scripts/` 是可选确定性工具。配置 Python 代码节点或工作流时可调用；没有执行环境时按对应知识文档手工完成，不得声称脚本已经运行。\n6. 用真实任务测试检索命中、规则遵循、事实标注和输出深度。\n\n生成来源：{skill['repository']}\n"""
     (package_root / "IMPORT.md").write_text(import_guide, encoding="utf-8")
     package_manifest = {
         "adapter": "coze-prompt-knowledge",
         "skill": name,
         "source": skill["repository"],
-        "generated_from": ["SKILL.md", "references/", "platforms/coze/agent-prompt.md"],
+        "generated_from": ["SKILL.md", "references/", "scripts/", "platforms/coze/agent-prompt.md"],
         "knowledge_files": sorted(path.relative_to(package_root).as_posix() for path in knowledge_root.rglob("*") if path.is_file()),
+        "optional_scripts": sorted(path.relative_to(package_root).as_posix() for path in tool_root.rglob("*") if path.is_file()),
     }
     (package_root / "manifest.json").write_text(
         json.dumps(package_manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
